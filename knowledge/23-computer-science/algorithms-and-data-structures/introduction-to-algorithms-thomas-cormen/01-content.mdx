@@ -58,7 +58,7 @@ The recurrence T(n) = a T(n/b) + f(n) is solved via the master theorem.
 > **Master Theorem:** If T(n) = a T(n/b) + f(n) where a >= 1, b > 1:
 > 1. If f(n) = O(n^(log_b a - epsilon)), then T(n) = Theta(n^(log_b a))
 > 2. If f(n) = Theta(n^(log_b a)), then T(n) = Theta(n^(log_b a) log n)
-> 3. If f(n) = Omega(n^(log_b a + epsilon)) and a f(n/b) <= c f(n),
+> 3. If $f(n) = \Omega(n^&#123;\log_b a + \epsilon&#125;)$ and $a f(n/b) \le c f(n)$,
 >    then T(n) = Theta(f(n))
 
 Applications: maximum subarray (Kadane-like divide-and-conquer variant,
@@ -134,7 +134,7 @@ Hash tables offer O(1) average-case search, insert, delete. CLRS covers:
 - Direct-address tables
 - Chaining with linked lists
 - Open addressing (linear probing, quadratic probing, double hashing)
-- Universal hashing: H = {h_ab(k) = ((ak + b) mod p) mod m}
+- Universal hashing: $\mathcal{H} = \&#123;h_&#123;a,b&#125;(k) = ((ak + b) \bmod p) \bmod m\&#125;$
 - Perfect hashing for static sets
 
 The load factor alpha = n/m governs performance. Successful search in
@@ -142,7 +142,7 @@ chaining: 1 + alpha/2.
 
 ### Chapter 12: Binary Search Trees
 
-BST properties: left subtree keys < root key < right subtree keys.
+BST properties: left subtree keys $\lt$ root key $\lt$ right subtree keys.
 Operations: search, minimum, maximum, predecessor, successor, insert,
 delete — all O(h) where h is tree height (O(n) worst-case without
 balancing).
@@ -151,7 +151,7 @@ Tree walk (inorder) produces sorted output in Theta(n).
 
 ### Chapter 13: Red-Black Trees
 
-A self-balancing BST with five properties ensuring longest path <= 2x
+A self-balancing BST with five properties ensuring longest path $\le$ 2x
 shortest path:
 1. Every node is red or black
 2. Root is black
@@ -159,7 +159,7 @@ shortest path:
 4. Red nodes have black children
 5. All paths from a node to its leaves have same number of black nodes
 
-Height guarantee: h <= 2 log_2(n+1). Insertion and deletion are O(log
+Height guarantee: $h \le 2 \log_2(n+1)$. Insertion and deletion are O(log
 n) with rotation-based rebalancing (left-rotate, right-rotate).
 
 ### Chapter 14: Augmenting Data Structures
@@ -328,4 +328,4 @@ formalized.
 
 Fibonacci heaps support O(1) amortized insert and decrease-key, used to
 speed up Dijkstra and Prim. van Emde Boas trees support O(log log M)
-operations on integer keys in range {0..M-1}.
+operations on integer keys in range $\{0 \dots M-1\}$.

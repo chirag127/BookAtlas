@@ -12,7 +12,7 @@ Ellenberg operates from a single philosophical commitment: mathematical reasonin
 
 This is why Ellenberg's subtitle is *The Power of Mathematical Thinking*, not *The Power of Mathematics*. He deliberately avoids the subject matter of professional mathematics — proofs in abstract algebra, theorems in topology, calculations in differential geometry — and focuses instead on the *stance* that mathematics trains: the refusal to accept a pattern as real until you have asked what the alternative explanations are, how large the sample is, and what would show you are wrong.
 
-<mermaid>
+```mermaid
 mindmap
   root((Mathematical Thinking))
     What it is NOT
@@ -35,7 +35,7 @@ mindmap
       Regression to mean confusion
       Prosecutor fallacy
       False causality
-</mermaid>
+```
 
 ### Layer 2 — Structural Analysis
 
@@ -43,7 +43,7 @@ The book is organized as twelve loosely connected chapters, each anchored to a c
 
 The key structural device is the *mathematical anecdote* as philosophical argument. Wald's bullet holes are not just a story about WWII aircraft — they are an argument about the asymmetry of evidence. Galton's regression line is not just a history lesson — it is an argument about why prediction requires out-of-sample testing. Each chapter builds toward the same implicit conclusion: the mathematical mindset is characterized not by what you know but by *what you refuse to accept without proof*.
 
-<mermaid>
+```mermaid
 flowchart TD
     A[Observe Pattern] --> B{Ask What's Missing}
     B -->|Survivorship bias| C[Check Unobserved Cases]
@@ -56,7 +56,7 @@ flowchart TD
     F --> G
     G --> H[Bayesian Update with Prior]
     H --> I[Calibrated Belief]
-</mermaid>
+```
 
 ### Layer 3 — Thematic Analysis
 
@@ -76,7 +76,7 @@ This is the deepest lesson in the book: *mathematical thinking is the discipline
 
 Ellenberg treats probability not as a number that describes the world, but as a language for describing the *state of knowledge* about the world. A probability of 0.7 does not mean "the event is 70% likely" — it means "given what I know, I should allocate 70% of my confidence to this outcome over its complement." This epistemic reading of probability is what makes Bayesian reasoning intellectually honest: it admits that the prior is imperfect, that the evidence is partial, and that the posterior is always provisional.
 
-<mermaid>
+```mermaid
 graph LR
     subgraph Bayesian Thinking
         P[Prior Belief] --> L[New Evidence]
@@ -88,7 +88,7 @@ graph LR
     end
     CB --> Q[New Observation]
     Q --> P
-</mermaid>
+```
 
 **Theme IV: Mathematics and Justice**
 

@@ -16,7 +16,7 @@ The chapter also introduces the category of elements of a functor F: C -> Set, w
 
 Universal properties are the heart of category theory. Mac Lane defines a universal arrow from an object X to a functor F: D -> C as an initial object in the comma category (X, F). Dually, a universal arrow from F to X is a terminal object in (F, X). These definitions capture the essence of "free" constructions, products, and limits.
 
-Limits are defined via cones over a diagram D: J -> C. A limit is a universal cone — a cone (L, p_j) such that for any other cone (X, f_j) there exists a unique mediating morphism u: X -> L with p_j o u = f_j. Colimits are the dual notion. Examples include products (limit over a discrete diagram), equalizers (limit over parallel arrows), and pullbacks (limit over a span). Mac Lane shows that Set has all small limits: the product of sets is the Cartesian product, the equalizer of f,g: A -> B is {a in A | f(a) = g(a)}, and the pullback of f: A -> C, g: B -> C is {(a,b) | f(a) = g(b)}.
+Limits are defined via cones over a diagram $D: J \to C$. A limit is a universal cone — a cone $(L, p_j)$ such that for any other cone $(X, f_j)$ there exists a unique mediating morphism $u: X \to L$ with $p_j \circ u = f_j$. Colimits are the dual notion. Examples include products (limit over a discrete diagram), equalizers (limit over parallel arrows), and pullbacks (limit over a span). Mac Lane shows that Set has all small limits: the product of sets is the Cartesian product, the equalizer of $f,g: A \to B$ is $\{a \in A \mid f(a) = g(a)\}$, and the pullback of $f: A \to C, g: B \to C$ is $\{(a,b) \mid f(a) = g(b)\}$.
 
 ### Chapter IV: Adjoints
 
@@ -44,9 +44,9 @@ Beck's Monadicity Theorem provides conditions for a functor U: A -> X to be mona
 
 ### Chapter VII: Monoids
 
-This chapter studies monoidal categories — categories with a tensor product ⊗: C x C -> C, a unit object I, and natural isomorphisms for associativity (a_{A,B,C}: (A⊗B)⊗C -> A⊗(B⊗C)) and unit (l_A: I⊗A -> A, r_A: A⊗I -> A). The coherence theorem (Mac Lane's own result) states that every diagram built from these structure isomorphisms commutes — essentially, all parenthesizations of a tensor product are canonically isomorphic.
+This chapter studies monoidal categories — categories with a tensor product $\otimes: \mathcal{C} \times \mathcal{C} \to \mathcal{C}$, a unit object $I$, and natural isomorphisms for associativity ($a&#123;A,B,C&#125;: (A \otimes B) \otimes C \to A \otimes (B \otimes C)$) and unit ($l_A: I \otimes A \to A$, $r_A: A \otimes I \to A$). The coherence theorem (Mac Lane's own result) states that every diagram built from these structure isomorphisms commutes — essentially, all parenthesizations of a tensor product are canonically isomorphic.
 
-Symmetric monoidal categories add a braiding B_{A,B}: A⊗B -> B⊗A satisfying B_{B,A} o B_{A,B} = 1_{A⊗B}. Examples include Set with Cartesian product, Vect with tensor product, and the category of chain complexes with the graded tensor product.
+Symmetric monoidal categories add a braiding $B&#123;A,B&#125;: A \otimes B \to B \otimes A$ satisfying $B&#123;B,A&#125; \circ B&#123;A,B&#125; = 1&#123;A \otimes B&#125;$. Examples include Set with Cartesian product, Vect with tensor product, and the category of chain complexes with the graded tensor product.
 
 The chapter develops the theory of monoids in a monoidal category (objects with multiplication mu: M⊗M -> M and unit eta: I -> M satisfying associativity and unit), which generalizes ordinary monoids, rings, algebras, and monads all as instances of the same structure.
 
@@ -70,7 +70,7 @@ Kan extensions answer the question: given a functor K: C -> C' and a functor F: 
 
 ### Chapter XI: Symmetry and Braiding in Monoidal Categories (Second Edition)
 
-This chapter extends the theory of monoidal categories to symmetric and braided versions. A braided monoidal category has a natural isomorphism B_{A,B}: A⊗B -> B⊗A (the braiding) satisfying hexagon identities. A symmetric monoidal category additionally satisfies B_{B,A} o B_{A,B} = 1. The coherence theorem for braided categories shows that every diagram of braidings commutes, up to the action of the braid group. Applications include knot invariants (the Jones polynomial arises from braided categories) and quantum groups.
+This chapter extends the theory of monoidal categories to symmetric and braided versions. A braided monoidal category has a natural isomorphism $B&#123;A,B&#125;: A \otimes B \to B \otimes A$ (the braiding) satisfying hexagon identities. A symmetric monoidal category additionally satisfies $B&#123;B,A&#125; \circ B&#123;A,B&#125; = 1$. The coherence theorem for braided categories shows that every diagram of braidings commutes, up to the action of the braid group. Applications include knot invariants (the Jones polynomial arises from braided categories) and quantum groups.
 
 ### Chapter XII: Structures in Categories (Second Edition)
 
