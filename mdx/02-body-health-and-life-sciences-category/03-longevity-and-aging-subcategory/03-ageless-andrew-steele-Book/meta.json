@@ -1,0 +1,53 @@
+{
+  "id": "ageless-andrew-steele",
+  "title": "Ageless: The New Science of Getting Older Without Getting Old",
+  "slug": "03-ageless-andrew-steele",
+  "authors": [
+    "Andrew Steele"
+  ],
+  "year": 2021,
+  "category": "02-medicine-health-sciences",
+  "subcategory": "longevity-research-and-aging",
+  "pages": 352,
+  "isbn": "9780385544511",
+  "publisher": "Doubleday",
+  "language": "en",
+  "genres": [
+    "Science",
+    "Health & Longevity",
+    "Biology",
+    "Popular Science"
+  ],
+  "subjects": [
+    "Longevity",
+    "Aging",
+    "Biogerontology",
+    "Senescence",
+    "Anti-Aging Research",
+    "Molecular Biology",
+    "Healthspan"
+  ],
+  "themes": [
+    "Aging as a Treatable Condition",
+    "Hallmarks of Aging",
+    "Scientific Progress and Translation",
+    "Healthspan vs Lifespan",
+    "Ethical Implications of Longevity"
+  ],
+  "tags": [
+    "longevity",
+    "aging",
+    "Andrew Steele",
+    "biogerontology",
+    "senolytics",
+    "healthspan",
+    "hallmarks of aging",
+    "anti-aging research",
+    "senescence",
+    "science of aging"
+  ],
+  "difficulty": "medium",
+  "estimatedReadingHours": 10,
+  "excerpt": "A computational biologist makes the case that aging is not an inevitable decline but a treatable biological process—and that the science to slow or reverse it is closer than we think. Structured around the nine hallmarks of aging.",
+  "rationale": "Root book #3 for longevity-research-and-aging. Ageless provides the most comprehensive and scientifically rigorous popular overview of the hallmarks of aging, serving as an essential companion to Outlive (practical protocol) and The Telomere Effect (cellular mechanism focus)."
+}
