@@ -1,0 +1,161 @@
+---
+title: Core Concepts
+subtitle: Functions, Objects, Inheritance, and the Good Parts of JavaScript
+---
+
+## The Good Parts Philosophy
+
+Crockford's central claim: JavaScript contains a beautiful, elegant,
+powerful core — but it also contains problematic features. The key
+to writing good JavaScript is to use the good parts and avoid the
+bad ones.
+
+```mermaid
+graph TD
+    subgraph Good_Parts["The Good Parts"]
+        F["Functions as first-class objects"]
+        O["Object literals"]
+        A["Array literals"]
+        PT["Prototypal inheritance"]
+        CL["Closures"]
+        RG["Regular expressions"]
+    end
+
+    subgraph Bad_Parts["The Bad Parts"]
+        GV["Global variables"]
+        EW["with statement"]
+        EV["eval function"]
+        EQ["== (loose equality)"]
+        SP["Switch fall-through"]
+    end
+
+    Good_Parts --> JS["Quality JavaScript"]
+    Bad_Parts --> AV["AVOID"]
+```
+
+---
+
+## Functions
+
+Functions are the core building block of JavaScript.
+
+```mermaid
+graph TD
+    subgraph Function_Types["Functions in JavaScript"]
+        FD["Function Declaration<br/>function foo() {}"]
+        FE["Function Expression<br/>const foo = function() {}"]
+        AF["Arrow Function<br/>const foo = () => {}"]
+        IIFE["IIFE<br/>(function(){})()"]
+        CB["Callback<br/>setTimeout(fn, 100)"]
+    end
+
+    subgraph Concepts["Key Concepts"]
+        SC["Scope Chain<br/>Lexical scoping"]
+        CL["Closure<br/>Functions remember scope"]
+        TH["this binding<br/>Context-dependent"]
+        AR["arguments object<br/>Array-like parameters"]
+    end
+
+    Function_Types --> Concepts
+```
+
+---
+
+## Object Creation
+
+Crockford recommends object literals and the module pattern over
+classical constructor functions.
+
+| Pattern | Good Part? | Use Case |
+|---------|-----------|----------|
+| Object literal {} | Yes | Simple objects, namespaces |
+| Module pattern (IIFE) | Yes | Private state, encapsulation |
+| Constructor with new | Caution | Use with capital letter convention |
+| Object.create | Yes | Prototypal inheritance |
+| Class syntax (ES6) | Modern | Not covered in the book |
+
+---
+
+## Prototypal Inheritance
+
+JavaScript uses prototypal inheritance — objects inherit directly from
+other objects.
+
+```mermaid
+graph TD
+    subgraph Prototype_Chain["Prototype Chain"]
+        OBJ["Object.prototype"]
+        MY["myObject<br/>{ name: 'test' }"]
+        MY -- "__proto__" --> OBJ
+    end
+
+    subgraph Classical["Classical (for comparison)"]
+        CLS["Class Animal"]
+        CLS --> DOG["new Dog()"]
+        CLS --> CAT["new Cat()"]
+    end
+```
+
+---
+
+## Arrays
+
+JavaScript arrays are objects with special length behavior.
+
+```mermaid
+flowchart LR
+    subgraph Array_Best["Array Good Parts"]
+        L["Array literal []"]
+        PS["push / pop"]
+        SH["shift / unshift"]
+        SP["splice"]
+        SL["slice"]
+        FR["forEach / map / filter"]
+    end
+
+    subgraph Array_Worst["Array Bad Parts"]
+        FO["for...in on arrays"]
+        DE["delete (use splice instead)"]
+    end
+```
+
+---
+
+## Regular Expressions
+
+Crockford provides a concise guide to regex patterns useful for
+everyday JavaScript programming.
+
+| Pattern | Matches |
+|---------|---------|
+| /^\s*$/ | Empty or whitespace-only |
+| /^[\w-]+(\.[\w-]+)*@/ | Email-like identifiers |
+| /\/\*[\s\S]*?\*\// | Block comments |
+
+---
+
+## Style and Conventions
+
+Crockford strongly advocates for:
+
+1. Consistent indentation (2 spaces)
+2. Always use curly braces for blocks
+3. Use === and !== exclusively
+4. No space between function name and parameters
+5. Capitalize constructor functions
+6. Declare variables at the top of their scope
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---------|-------|-----------|----------|
+| 1-2 | Philosophy and syntax | 30 min | Essential |
+| 3-4 | Functions and objects | 1h | Essential |
+| 5 | Inheritance | 45 min | Essential |
+| 6 | Arrays | 30 min | Essential |
+| 7-8 | Regex and methods | 45 min | Important |
+| Appendix A | The Awful Parts | 30 min | Essential |
+| Appendix B | The Bad Parts | 30 min | Important |
+| Appendix C | JSLint | 20 min | Optional |

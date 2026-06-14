@@ -1,0 +1,28 @@
+{
+  "slug": "02-staff-engineer-will-larson",
+  "title": "Staff Engineer",
+  "subtitle": "Leadership Beyond the Management Track",
+  "author": "Will Larson",
+  "publicationYear": 2021,
+  "isbn": "9781736417916",
+  "publisher": "Self-Published",
+  "language": "en",
+  "pageCount": 300,
+  "genres": ["Business", "Leadership", "Technology", "Career Development"],
+  "subjects": ["Staff Engineering", "Technical Leadership", "Career", "Engineering", "Senior IC", "Leadership"],
+  "themes": [
+    "The four Staff Engineer archetypes",
+    "Getting promoted to Staff Engineer",
+    "Leading without authority",
+    "Technical strategy and direction setting",
+    "Building sponsorship and organizational influence"
+  ],
+  "tags": [
+    "staff-engineer", "technical-leadership", "career", "engineering",
+    "senior-ic", "leadership", "will-larson", "promotion",
+    "influence", "sponsorship", "technical-strategy"
+  ],
+  "difficulty": "medium",
+  "estimatedReadingHours": 8,
+  "estimatedListeningMinutes": 480
+}

@@ -1,0 +1,130 @@
+---
+title: Core Concepts
+subtitle: Understanding the VC Term Sheet
+---
+
+## The Term Sheet Anatomy
+
+Feld and Mendelson walk through every clause of a standard VC term sheet.
+
+```mermaid
+graph TD
+    subgraph Term_Sheet["Term Sheet Components"]
+        EC["Economic Terms<br/>Money and ownership"]
+        CC["Control Terms<br/>Power and governance"]
+        LP["Legal Provisions<br/>Standard boilerplate"]
+    end
+
+    EC --> S["The complete<br/>term sheet"]
+    CC --> S
+    LP --> S
+```
+
+---
+
+## Economic Terms
+
+### Valuation
+
+| Term | Definition | Typical Range |
+|---|---|---|
+| Pre-money valuation | Value before investment | Depends on stage, sector |
+| Post-money valuation | Pre-money + investment amount | Determines ownership % |
+| Price per share | Valuation / fully diluted shares | Varies |
+
+### Liquidation Preference
+
+The most important economic term.
+
+```mermaid
+flowchart LR
+    subgraph Liquidation["Liquidation Preference Scenarios"]
+        A["Company sold for $100M"]
+        B["1x Non-Participating<br/>VC gets $30M,<br/>Common gets $70M"]
+        C["1x Participating<br/>VC gets $30M + 30%<br/>of remaining $70M = $51M"]
+        D["2x Participating<br/>VC gets $60M + 30%<br/>of remaining $40M = $72M"]
+    end
+
+    A --> B
+    A --> C
+    A --> D
+```
+
+### Anti-Dilution
+
+| Type | Protection Level | Effect |
+|---|---|---|
+| Full ratchet | Strongest | Investors repriced to lowest round price |
+| Weighted average | Standard | Adjusts based on price and amount |
+| No protection | Weakest | Investors bear full dilution risk |
+
+---
+
+## Control Terms
+
+### Board of Directors
+
+```mermaid
+flowchart LR
+    subgraph Board["Common Board Structures"]
+        A["Entrepreneur-friendly<br/>2 founders, 1 VC, 1 independent"]
+        B["Balanced<br/>1 founder, 1 VC, 1 independent"]
+        C["VC-control<br/>1 founder, 2 VCs, 1 independent"]
+    end
+
+    A -->|"Founder<br/>control"| D["Board seats<br/>determine power"]
+    B -->|"Shared<br/>control"| D
+    C -->|"VC<br/>control"| D
+```
+
+### Protective Provisions
+
+Items that require investor approval, even if the board agrees:
+- Changing authorized shares
+- Selling the company
+- Incurring debt above a threshold
+- Paying dividends
+- Changing the business
+
+---
+
+## The Term Sheet Negotiation
+
+```mermaid
+flowchart TD
+    A["Term Sheet Received"] --> B{Understand every<br/>clause?}
+    B -->|No| C["Read Venture Deals<br/>Chapter 3-8"]
+    B -->|Yes| D["Prioritize your terms"]
+    D --> E["1. Valuation?<br/>2. Liquidation pref?<br/>3. Board control?<br/>4. Anti-dilution?"]
+    E --> F["Negotiate, don't<br/>litigate"]
+    F --> G["Signed term sheet"]
+    G --> H["Due diligence<br/>and closing"]
+```
+
+Feld's advice: only negotiate what matters. Save your chips for the
+terms that will have real impact on your outcome.
+
+---
+
+## The Entrepreneur-VC Relationship
+
+| Phase | Key Activity | Pitfall |
+|---|---|---|
+| Courtship | Getting to know each other | Falling in love with money |
+| Term sheet | Negotiating terms | Fighting over everything |
+| Due diligence | Opening your books | Hiding problems |
+| The close | Legal paperwork | Losing momentum |
+| The marriage | Working together | Misaligned expectations |
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---|---|---|---|
+| 1-2 | How VC works | 45 min | Essential |
+| 3-5 | Economic terms | 1.5h | Essential |
+| 6-7 | Control terms | 1h | Essential |
+| 8 | Legal terms | 30 min | Important |
+| 9-10 | Negotiation | 45 min | Essential |
+| 11-13 | The relationship | 45 min | Important |

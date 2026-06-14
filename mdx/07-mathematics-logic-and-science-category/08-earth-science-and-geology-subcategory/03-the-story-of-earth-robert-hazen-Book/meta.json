@@ -1,0 +1,22 @@
+{
+  "id": "the-story-of-earth-robert-hazen",
+  "slug": "the-story-of-earth-robert-hazen",
+  "title": "The Story of Earth",
+  "subtitle": "How Life and Rocks Co-Evolved",
+  "authors": ["Robert M. Hazen"],
+  "year": 2012,
+  "category": "Mathematics, Logic & Science",
+  "subcategory": "Earth Science and Geology",
+  "pages": 288,
+  "isbn": "9780143123644",
+  "language": "en",
+  "genres": ["Science", "Geology", "Earth Science", "Nonfiction", "Popular Science"],
+  "subjects": ["Earth History", "Geology", "Co-Evolution", "Mineralogy", "Origin of Life"],
+  "themes": ["Life and Geology", "Planetary Evolution", "Complexity and Co-Evolution"],
+  "tags": ["earth-science", "geology", "co-evolution", "robert-hazen", "origins-of-life", "mineralogy", "biogeology", "earth-history", "popular-science"],
+  "difficulty": "easy-medium",
+  "estimatedReadingHours": 7,
+  "estimatedListeningMinutes": 420,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

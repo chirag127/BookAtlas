@@ -1,0 +1,22 @@
+{
+  "id": "book-of-heroines-roshani-magill",
+  "slug": "book-of-heroines-roshani-magill",
+  "title": "The Book of Heroines: Tales of History's Gutsiest Gals",
+  "subtitle": null,
+  "authors": ["Roshani Magill"],
+  "year": 2013,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Biographical Reference",
+  "pages": 304,
+  "isbn": "9780762445637",
+  "language": "en",
+  "genres": ["Biography", "Children's Nonfiction", "Women's History", "Reference"],
+  "subjects": ["Women", "Biography", "History", "Heroes and Heroines"],
+  "themes": ["Female Achievement", "Role Models", "Overcoming Barriers", "Historical Recognition"],
+  "tags": ["biography", "heroes", "heroines", "history", "reference", "inspirational", "womens-history", "feminism", "role-models", "illustrated"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 4,
+  "estimatedListeningMinutes": 240,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

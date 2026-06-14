@@ -1,0 +1,225 @@
+---
+title: Core Concepts
+subtitle: Reliability, Scalability, Maintainability, and the Architecture of Distributed Data
+---
+
+## The Three Pillars
+
+Kleppmann defines three fundamental properties every data system needs:
+
+### Reliability
+
+The system should continue to work correctly even when faults occur.
+Faults can be hardware (disk failure, power outage), software (bugs,
+cascading failures), or human (misconfiguration).
+
+```mermaid
+graph TD
+    subgraph Fault_Types["Types of Faults"]
+        H["Hardware Faults<br/>(disk, network, power)"]
+        S["Software Faults<br/>(bugs, cascading)"]
+        U["Human Faults<br/>(misconfiguration)"]
+    end
+
+    subgraph Countermeasures["Countermeasures"]
+        H1["Redundancy<br/>RAID, multi-DC"]
+        S1["Careful design<br/>Testing, isolation"]
+        U1["Automation<br/>Sandboxes, monitoring"]
+    end
+
+    H --> H1
+    S --> S1
+    U --> U1
+
+    Fault_Types --> Goal["RELIABILITY<br/>System works despite failures"]
+```
+
+### Scalability
+
+Ability to handle increased load. Define load parameters (requests per
+second, read/write ratio, data volume) and measure performance metrics
+(response time, throughput).
+
+### Maintainability
+
+Three design goals: Operability (easy ops), Simplicity (low complexity),
+Evolvability (easy to change). Most costs are in maintenance, not
+initial development.
+
+---
+
+## Data Models and Query Languages
+
+The choice of data model shapes how you think about your data.
+
+| Model | Strengths | Weaknesses |
+|-------|-----------|------------|
+| Relational (SQL) | Joins, constraints, standard query language | Rigid schema, impedance mismatch |
+| Document (NoSQL) | Schema flexibility, locality | Weak joins, no standard query |
+| Graph | Rich relationships, traversal | Complex queries, less mature |
+
+Kleppmann argues that the future is multi-model — using the right model
+for the right part of your system.
+
+---
+
+## Storage and Retrieval
+
+Two families of storage engines dominate:
+
+```mermaid
+flowchart TD
+    subgraph Storage_Engines["Storage Engine Families"]
+        LSM["LSM-Trees<br/>Cassandra, HBase, LevelDB"]
+        BT["B-Trees<br/>MySQL, PostgreSQL, SQL Server"]
+    end
+
+    subgraph LSM_Tradeoffs["LSM-Tree Trade-offs"]
+        LSM_P["High write throughput<br/>Compacted storage"]
+        LSM_C["Compaction overhead<br/>Read amplification"]
+    end
+
+    subgraph BT_Tradeoffs["B-Tree Trade-offs"]
+        BT_P["Strong read performance<br/>Predictable latency"]
+        BT_C["Write amplification<br/>Page overhead"]
+    end
+
+    LSM --> LSM_P
+    LSM --> LSM_C
+    BT --> BT_P
+    BT --> BT_C
+```
+
+Transactional (OLTP) and analytic (OLAP) workloads require different
+storage strategies. Column-oriented storage compresses better and scans
+faster than row-oriented storage.
+
+---
+
+## Encoding and Evolution
+
+| Format | Schema | Compatibility | Speed |
+|--------|--------|--------------|-------|
+| JSON / XML | No schema | Textual, verbose | Slow parsing |
+| Thrift | Required | Binary, compact | Fast |
+| Protocol Buffers | Required | Binary, very compact | Fast |
+| Avro | Required (writer/reader) | Best for long-term storage | Fast |
+
+Avro's approach is particularly elegant: the writer's schema and
+reader's schema can differ, and the system resolves the differences
+at read time.
+
+---
+
+## Replication
+
+```mermaid
+flowchart LR
+    subgraph Single_Leader["Single-Leader Replication"]
+        L["Leader<br/>(writes)"] --> F1["Follower 1"]
+        L --> F2["Follower 2"]
+        L --> F3["Follower 3"]
+    end
+
+    subgraph Multi_Leader["Multi-Leader Replication"]
+        L1["Leader 1"] <--> L2["Leader 2"]
+        L2 <--> L3["Leader 3"]
+    end
+
+    subgraph Leaderless["Leaderless Replication"]
+        C["Client"] --> N1["Node 1"]
+        C --> N2["Node 2"]
+        C --> N3["Node 3"]
+    end
+```
+
+Single-leader is simplest but has a single point for writes.
+Multi-leader works across data centers but requires conflict resolution.
+Leaderless (Dynamo-style) offers highest availability but weakest
+guarantees.
+
+---
+
+## Partitioning
+
+- **Key-range partitioning:** Simple, supports range queries, but risk of hotspots
+- **Hash partitioning:** Distributes data evenly, but breaks range queries
+
+---
+
+## Transactions
+
+| Isolation Level | Prevents Dirty Reads | Prevents Lost Updates | Prevents Phantom Reads | Performance Cost |
+|---|---|---|---|---|
+| Read Committed | Yes | No | No | Low |
+| Snapshot Isolation | Yes | Yes | No | Medium |
+| Serializable | Yes | Yes | Yes | High |
+
+---
+
+## The Trouble with Distributed Systems
+
+1. **Unreliable networks:** Packets can be delayed, duplicated, or dropped.
+2. **Unreliable clocks:** Time-of-day clocks can jump backwards.
+3. **Process pauses:** GC, VM pauses, or scheduling can stop a process.
+
+---
+
+## Batch and Stream Processing
+
+```mermaid
+flowchart LR
+    subgraph Batch["Batch Processing"]
+        M["Map Phase"] --> S["Shuffle/Sort"]
+        S --> R["Reduce Phase"]
+        R --> Output["Results file"]
+    end
+
+    subgraph Stream["Stream Processing"]
+        I["Input Stream"] --> P["Operator"]
+        P --> O1["Output Stream 1"]
+        P --> O2["Output Stream 2"]
+    end
+
+    subgraph Convergence["Convergence"]
+        Lambda["Lambda: Batch + Stream"]
+        Kappa["Kappa: Stream-only"]
+    end
+```
+
+---
+
+## Practical Applications
+
+### For Choosing a Database
+
+- Need strong consistency and complex joins? Use a relational database.
+- Need flexible schema and fast iteration? Use a document database.
+- Need high write throughput? Consider LSM-tree engines.
+- Need rich relationship queries? Use a graph database.
+
+### For System Design
+
+- Define your load parameters before choosing technology.
+- Use the simplest replication strategy that meets your needs.
+- Plan for partition rebalancing before you need it.
+- Instrument everything — you cannot fix what you cannot measure.
+
+---
+
+## Reading Guide
+
+| Chapter | Pages | Est. Time | Difficulty | Priority |
+|---------|-------|-----------|------------|----------|
+| 1: Reliable, Scalable, Maintainable | 1-24 | 1h | Easy | Essential |
+| 2: Data Models | 25-57 | 1.5h | Medium | Essential |
+| 3: Storage & Retrieval | 58-104 | 2h | Hard | Essential |
+| 4: Encoding | 105-132 | 1h | Medium | Essential |
+| 5: Replication | 133-183 | 2h | Hard | Essential |
+| 6: Partitioning | 184-215 | 1.5h | Medium | Essential |
+| 7: Transactions | 216-270 | 2h | Hard | Essential |
+| 8: Distributed Systems Trouble | 271-310 | 1.5h | Medium | Essential |
+| 9: Consistency | 311-349 | 1.5h | Hard | Important |
+| 10: Batch Processing | 350-405 | 2h | Medium | Important |
+| 11: Stream Processing | 406-466 | 2h | Hard | Important |
+| 12: The Future | 467-505 | 1.5h | Medium | Optional |

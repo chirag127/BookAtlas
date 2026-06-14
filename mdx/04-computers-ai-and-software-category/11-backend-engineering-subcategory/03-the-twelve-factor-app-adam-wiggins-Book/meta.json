@@ -1,0 +1,27 @@
+{
+  "slug": "03-the-twelve-factor-app-adam-wiggins",
+  "title": "The Twelve-Factor App",
+  "subtitle": "A Methodology for Building Modern, Cloud-Native Applications",
+  "author": "Adam Wiggins",
+  "publicationYear": 2021,
+  "isbn": "9781733377913",
+  "publisher": "Self-Published",
+  "language": "en",
+  "pageCount": 150,
+  "genres": ["Technology", "Software Engineering", "DevOps"],
+  "subjects": ["Cloud-Native", "SaaS", "Application Design", "Deployment", "Best Practices"],
+  "themes": [
+    "Codebase and dependency management",
+    "Configuration separation from code",
+    "Stateless process design",
+    "Dev/prod parity and continuous deployment",
+    "Logs as event streams"
+  ],
+  "tags": [
+    "twelve-factor", "cloud-native", "saas", "devops", "application-design",
+    "deployment", "best-practices", "backend-engineering", "adam-wiggins"
+  ],
+  "difficulty": "easy",
+  "estimatedReadingHours": 3,
+  "estimatedListeningMinutes": 180
+}

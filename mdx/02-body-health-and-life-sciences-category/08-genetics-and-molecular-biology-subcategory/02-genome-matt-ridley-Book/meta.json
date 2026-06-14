@@ -1,0 +1,52 @@
+{
+  "id": "genome-matt-ridley",
+  "title": "Genome: The Autobiography of a Species in 23 Chapters",
+  "slug": "02-genome-matt-ridley",
+  "authors": [
+    "Matt Ridley"
+  ],
+  "year": 1999,
+  "category": "02-medicine-health-sciences",
+  "subcategory": "genetics-and-molecular-biology",
+  "pages": 368,
+  "isbn": "9780060932909",
+  "publisher": "HarperCollins",
+  "language": "en",
+  "genres": [
+    "Science",
+    "Genetics",
+    "Popular Science",
+    "Biology"
+  ],
+  "subjects": [
+    "Genetics",
+    "Genomics",
+    "Human Genome",
+    "Molecular Biology",
+    "Evolution",
+    "History of Science"
+  ],
+  "themes": [
+    "Genes vs Environment",
+    "Genetic Determinism vs Free Will",
+    "Human Evolution Through Genetics",
+    "Ethics of Genetic Technology",
+    "The Unity and Diversity of Humankind"
+  ],
+  "tags": [
+    "genetics",
+    "genome",
+    "human genome project",
+    "Matt Ridley",
+    "chromosomes",
+    "DNA",
+    "evolution",
+    "genomics",
+    "molecular biology",
+    "popular science"
+  ],
+  "difficulty": "easy-medium",
+  "estimatedReadingHours": 10,
+  "excerpt": "A brilliant tour of the human genome, told through one gene on each of the 23 chromosomes, revealing how our DNA shapes everything from our physiology to our personality to our destiny. Shortlisted for the Samuel Johnson Prize.",
+  "rationale": "Root book #2 for genetics-and-molecular-biology. Genome is the classic popular introduction to genetics, providing the accessible conceptual foundation for the subcategory. It complements the molecular textbook (Molecular Biology of the Cell) with narrative and historical context."
+}

@@ -134,7 +134,7 @@ Hash tables offer O(1) average-case search, insert, delete. CLRS covers:
 - Direct-address tables
 - Chaining with linked lists
 - Open addressing (linear probing, quadratic probing, double hashing)
-- Universal hashing: $\mathcal{H} = \&#123;h_&#123;a,b&#125;(k) = ((ak + b) \bmod p) \bmod m\&#125;$
+- Universal hashing: `\mathcal{H} = \&#123;h_&#123;a,b&#125;(k) = ((ak + b) \bmod p) \bmod m\&#125;`
 - Perfect hashing for static sets
 
 The load factor alpha = n/m governs performance. Successful search in
@@ -328,4 +328,4 @@ formalized.
 
 Fibonacci heaps support O(1) amortized insert and decrease-key, used to
 speed up Dijkstra and Prim. van Emde Boas trees support O(log log M)
-operations on integer keys in range $\{0 \dots M-1\}$.
+operations on integer keys in range `\{0 \dots M-1\}`.

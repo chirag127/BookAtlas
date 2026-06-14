@@ -1,0 +1,22 @@
+{
+  "id": "oxford-dictionary-national-biography-oxford-dnb",
+  "slug": "oxford-dictionary-national-biography-oxford-dnb",
+  "title": "The Oxford Dictionary of National Biography",
+  "subtitle": "In Association with the British Academy",
+  "authors": ["Oxford University Press"],
+  "year": 2004,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Biographical Reference",
+  "pages": 1500,
+  "isbn": "9780198614111",
+  "language": "en",
+  "genres": ["Biography", "Reference", "History", "Scholarship"],
+  "subjects": ["Biography", "British History", "National Biography", "Reference"],
+  "themes": ["National Identity Through Biography", "Historical Memory", "Scholarly Authority"],
+  "tags": ["biography", "british-history", "reference", "influential-figures", "national-biography", "Oxford", "historical-figures", "scholarship"],
+  "difficulty": "hard",
+  "estimatedReadingHours": 100,
+  "estimatedListeningMinutes": 6000,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "02-the-little-book-of-common-sense-investing-john-bogle",
+  "title": "The Little Book of Common Sense Investing",
+  "subtitle": "The Only Way to Guarantee Your Fair Share of Stock Market Returns",
+  "author": "John C. Bogle",
+  "publicationYear": 2017,
+  "isbn": "9781119404507",
+  "publisher": "Wiley",
+  "language": "en",
+  "pageCount": 304,
+  "genres": ["Finance", "Investing", "Personal Finance", "Business"],
+  "subjects": ["Index Investing", "Passive Investing", "Mutual Funds", "Personal Finance", "Retirement Planning"],
+  "themes": [
+    "Low-cost index funds outperform active management",
+    "Investment costs as the primary determinant of returns",
+    "Reversion to the mean in fund performance",
+    "The power of compounding returns",
+    "Long-term discipline over market timing"
+  ],
+  "tags": [
+    "index-investing", "bogle", "vanguard", "passive-investing",
+    "low-cost", "john-bogle", "common-sense", "investing-strategy",
+    "mutual-funds", "etf", "expense-ratio", "compounding"
+  ],
+  "difficulty": "easy-medium",
+  "estimatedReadingHours": 4,
+  "estimatedListeningMinutes": 240
+}

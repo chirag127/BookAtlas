@@ -1,0 +1,22 @@
+{
+  "id": "great-conversation-mortimer-adler",
+  "slug": "great-conversation-mortimer-adler",
+  "title": "The Great Conversation: A Reader's Guide to the Great Books of the Western World",
+  "subtitle": null,
+  "authors": ["Mortimer J. Adler"],
+  "year": 1952,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Great Books and Reading Lists",
+  "pages": 166,
+  "isbn": "9780226474687",
+  "language": "en",
+  "genres": ["Education", "Philosophy", "Reference", "Literary Criticism"],
+  "subjects": ["Great Books", "Education", "Western Civilization", "Reading"],
+  "themes": ["Liberal Education", "Intellectual Tradition", "Canon Formation"],
+  "tags": ["great-books", "education", "liberal-arts", "western-thought", "classics", "reading-list", "philosophy", "Adler", "humanities", "western-canon"],
+  "difficulty": "medium",
+  "estimatedReadingHours": 5,
+  "estimatedListeningMinutes": 300,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

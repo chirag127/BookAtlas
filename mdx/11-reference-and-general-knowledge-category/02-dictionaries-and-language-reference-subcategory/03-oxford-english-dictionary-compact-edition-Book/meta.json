@@ -1,0 +1,22 @@
+{
+  "id": "oxford-english-dictionary-compact-edition",
+  "slug": "oxford-english-dictionary-compact-edition",
+  "title": "The Oxford English Dictionary (Compact Edition)",
+  "subtitle": "Complete Text Reproduced Micrographically",
+  "authors": ["Oxford University Press"],
+  "year": 1991,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Dictionaries and Language Reference",
+  "pages": 2400,
+  "isbn": "9780198614148",
+  "language": "en",
+  "genres": ["Dictionary", "Reference", "Lexicography", "Linguistics"],
+  "subjects": ["English Language", "Dictionary", "Etymology", "Vocabulary"],
+  "themes": ["Language History", "Lexicography", "Philology", "Word Origins"],
+  "tags": ["dictionary", "english-language", "etymology", "reference", "lexicography", "Oxford", "vocabulary", "philology"],
+  "difficulty": "hard",
+  "estimatedReadingHours": 100,
+  "estimatedListeningMinutes": 6000,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

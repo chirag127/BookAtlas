@@ -1,0 +1,22 @@
+{
+  "id": "wikipedia-the-missing-manual-john-broughton",
+  "slug": "wikipedia-the-missing-manual-john-broughton",
+  "title": "Wikipedia: The Missing Manual",
+  "subtitle": null,
+  "authors": ["John Broughton"],
+  "year": 2008,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Encyclopedias and Companions",
+  "pages": 390,
+  "isbn": "9780596515164",
+  "language": "en",
+  "genres": ["Reference", "Technology", "How-To"],
+  "subjects": ["Wikipedia", "Online Encyclopedias", "Wiki Editing", "Information Management"],
+  "themes": ["Online Collaboration", "Knowledge Production", "Digital Citizenship"],
+  "tags": ["Wikipedia", "reference", "research", "editing", "knowledge-management", "online-collaboration", "information-literacy", "wiki", "open-source", "OReilly"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 9,
+  "estimatedListeningMinutes": 540,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

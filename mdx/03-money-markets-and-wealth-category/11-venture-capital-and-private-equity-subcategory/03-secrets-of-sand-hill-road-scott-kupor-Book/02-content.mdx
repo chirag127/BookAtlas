@@ -1,0 +1,135 @@
+---
+title: Core Concepts
+subtitle: How Venture Capital Actually Works
+---
+
+## The VC Ecosystem
+
+VC firms are intermediaries between capital suppliers and capital users.
+
+```mermaid
+flowchart LR
+    subgraph Ecosystem["The VC Ecosystem"]
+        LP["Limited Partners<br/>Pension funds, endowments,<br/>foundations, family offices"]
+        GP["General Partners<br/>VC Firm (a16z, Sequoia, etc.)"]
+        PO["Portfolio Companies<br/>Startups"]
+    end
+
+    LP -->|"Capital"| GP
+    GP -->|"Invests in"| PO
+    PO -->|"Returns"| GP
+    GP -->|"Returns + profit"| LP
+```
+
+---
+
+## Fund Structure: 2-and-20
+
+The standard economic model.
+
+| Component | Typical | Explanation |
+|---|---|---|
+| Management fee | 2% of fund size | Covers salaries, office, operations |
+| Carried interest | 20% of profits | GP's share of fund returns |
+| Fund life | 10 years | Investment + harvest period |
+| Fund size | $50M to $1B+ | Determines check size and strategy |
+
+---
+
+## The Power Law
+
+The single most important concept in venture capital.
+
+```mermaid
+flowchart TD
+    subgraph Power_Law["Power Law of Venture Returns"]
+        A["Portfolio of 30 companies"]
+        B["20 return < 1x<br/>Fail or barely survive"]
+        C["8 return 1-5x<br/>Modest success"]
+        D["1 returns 10-50x<br/>Good investment"]
+        E["1 returns 50-100x+<br/>Fund returner"]
+    end
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    D --> F["The top 2-3 investments<br/>generate ALL fund returns"]
+    E --> F
+```
+
+### Implications of the Power Law
+
+1. VCs must swing for the fences
+2. Capital must be concentrated in the top performers
+3. Follow-on decisions are the most important investment decisions
+4. Small funds cannot diversify enough to benefit from the power law
+
+---
+
+## How VCs Evaluate Startups
+
+```mermaid
+flowchart TD
+    subgraph Evaluation["VC Evaluation Framework"]
+        M["Market<br/>Size and growth"]
+        T["Team<br/>Founder quality and fit"]
+        P["Product<br/>Differentiation and defensibility"]
+        B["Business Model<br/>Unit economics and scalability"]
+        TR["Timing<br/>Market readiness"]
+    end
+
+    M --> D["Investment Decision"]
+    T --> D
+    P --> D
+    B --> D
+    TR --> D
+```
+
+Kupor's emphasis: **Market is the most important factor.**
+
+---
+
+## The GP-LP Relationship
+
+```mermaid
+flowchart LR
+    subgraph GP_LP_["GP-LP Dynamics"]
+        LP["LP Commitments"]
+        GP_Team["GP Team"]
+        ESG["ESG and Impact<br/>Growing LP priorities"]
+    end
+
+    LP -->|"Committed capital"| GP_Team
+    LP -->|"Reporting and transparency"| GP_Team
+    GP_Team -->|"Fund performance"| LP
+    GP_Team -->|"Capital calls"| LP
+    ESG -->|"Increasing influence"| LP
+```
+
+---
+
+## The Venture Capital Firm
+
+Kupor describes the internal structure of a VC firm.
+
+| Role | Responsibility |
+|---|---|
+| General Partner (GP) | Investment decisions, fundraising, portfolio support |
+| Principal | Deal sourcing, evaluation, closing |
+| Associate | Screening, diligence, portfolio monitoring |
+| Analyst | Market research, deal flow management |
+| Platform | Portfolio support, marketing, recruiting |
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---|---|---|---|
+| 1-2 | The VC ecosystem | 45 min | Essential |
+| 3-4 | Fund economics | 1h | Essential |
+| 5-7 | How VCs invest | 1.5h | Essential |
+| 8-10 | Working with VCs | 1h | Essential |
+| 11-12 | The LP perspective | 30 min | Important |
+| 13-14 | The future of VC | 30 min | Important |

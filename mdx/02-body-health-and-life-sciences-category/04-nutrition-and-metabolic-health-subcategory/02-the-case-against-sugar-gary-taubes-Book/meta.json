@@ -1,0 +1,54 @@
+{
+  "id": "the-case-against-sugar-gary-taubes",
+  "title": "The Case Against Sugar",
+  "slug": "02-the-case-against-sugar-gary-taubes",
+  "authors": [
+    "Gary Taubes"
+  ],
+  "year": 2016,
+  "category": "02-medicine-health-sciences",
+  "subcategory": "nutrition-science",
+  "pages": 384,
+  "isbn": "9780307701640",
+  "publisher": "Alfred A. Knopf",
+  "language": "en",
+  "genres": [
+    "Nutrition",
+    "Health",
+    "Science",
+    "Investigative Journalism"
+  ],
+  "subjects": [
+    "Nutrition",
+    "Sugar",
+    "Fructose Metabolism",
+    "Obesity",
+    "Diabetes",
+    "Metabolic Health",
+    "Food Industry Regulation",
+    "Public Health"
+  ],
+  "themes": [
+    "Corporate Corruption of Science",
+    "Metabolic Toxicity of Fructose",
+    "Dietary Guidelines as Public Health Experiment",
+    "Individual vs Systemic Responsibility",
+    "The Sugar-Addiction Hypothesis"
+  ],
+  "tags": [
+    "nutrition",
+    "sugar",
+    "obesity",
+    "diabetes",
+    "Gary Taubes",
+    "fructose",
+    "metabolic health",
+    "food industry",
+    "public health",
+    "metabolic syndrome"
+  ],
+  "difficulty": "medium",
+  "estimatedReadingHours": 11,
+  "excerpt": "A provocative and meticulously researched indictment of sugar as the primary dietary driver of the modern epidemics of obesity, diabetes, heart disease, and cancer. Taubes combines biochemistry, epidemiology, and investigative journalism to build the case.",
+  "rationale": "Root book #2 for nutrition-science. The Case Against Sugar provides the focused biochemical and historical argument for sugar as a primary dietary toxin, complementing Salt Sugar Fat's investigative journalism approach with deeper mechanistic science."
+}

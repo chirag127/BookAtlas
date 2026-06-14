@@ -1,0 +1,158 @@
+---
+title: Core Concepts
+subtitle: Swift's Type System, Protocol-Oriented Design, Memory Management, and Concurrency
+---
+
+## Swift's Design Philosophy
+
+Swift is a safe, fast, and expressive language designed by Apple for
+systems programming and app development. It combines the performance
+of compiled languages with the readability of modern scripting languages.
+
+```mermaid
+graph TD
+    subgraph Swift_Goals["Swift Design Goals"]
+        S["Safety<br/>Optionals, type safety, ARC"]
+        P["Performance<br/>LLVM compiled, value types"]
+        E["Expressiveness<br/>Syntax, pattern matching, generics"]
+    end
+
+    subgraph Features["Core Features"]
+        VS["Value Semantics<br/>Structs, enums, tuples"]
+        RS["Reference Semantics<br/>Classes, closures"]
+        PO["Protocol-Oriented<br/>Protocols, extensions"]
+        GM["Generics<br/>Type-safe polymorphism"]
+    end
+
+    Swift_Goals --> Features
+```
+
+---
+
+## Types: Value vs. Reference
+
+```mermaid
+graph LR
+    subgraph Value_Types["Value Types (Copy on assignment)"]
+        S1["struct"]
+        EN["enum"]
+        TU["tuple"]
+    end
+
+    subgraph Reference_Types["Reference Types (Share reference)"]
+        CL["class"]
+        AC["actor"]
+        CL2["closure"]
+    end
+
+    Value_Types --> |"Copy"| V1["Independent copy"]
+    Reference_Types --> |"Share"| R1["Same instance"]
+```
+
+---
+
+## Optionals
+
+Optionals are Swift's type-safe way to handle the absence of a value.
+
+| Feature | Syntax | Purpose |
+|---------|--------|---------|
+| Optional declaration | var name: String? | Value may be nil |
+| Force unwrap | name! | Crash if nil |
+| Optional binding | if let name = name | Safe unwrap |
+| Guard let | guard let name = name | Early exit on nil |
+| Nil coalescing | name ?? "default" | Provide default |
+| Optional chaining | name?.count | Chain safe access |
+
+---
+
+## Protocol-Oriented Programming
+
+Protocols define capabilities. Protocol extensions provide default
+implementations. This is Swift's signature paradigm.
+
+```mermaid
+graph TD
+    subgraph POP["Protocol-Oriented Programming"]
+        P["protocol Drivable {<br/>var speed: Double { get }<br/>func drive()<br/>}"]
+        PE["extension Drivable {<br/>func drive() {<br/> print('Driving at \(speed)')<br/>}<br/>}"]
+        C["struct Car: Drivable {<br/>let speed: Double = 100<br/>}<br/>// Default drive() is sufficient"]
+    end
+
+    P --> PE
+    PE --> C
+```
+
+---
+
+## Memory Management with ARC
+
+Automatic Reference Counting manages memory for reference types.
+
+```mermaid
+graph LR
+    subgraph ARC["ARC in Action"]
+        A["Object created<br/>Ref count = 1"]
+        B["Strong reference added<br/>Ref count = 2"]
+        C["Reference removed<br/>Ref count = 1"]
+        D["No references<br/>Ref count = 0, deallocated"]
+    end
+
+    A --> B --> C --> D
+```
+
+| Reference Type | Default | Effect |
+|---------------|---------|--------|
+| strong (default) | Increases ref count | Object stays alive |
+| weak | Does not increase | Automatically nil when deallocated |
+| unowned | Does not increase | Assumes lifetime equality |
+
+---
+
+## Concurrency with Async/Await
+
+Swift's structured concurrency model uses async/await, actors, and
+task groups.
+
+```mermaid
+flowchart LR
+    subgraph Concurrency_Model["Swift Concurrency"]
+        async["async function"]
+        await["await call"]
+        actor["Actor (isolated state)"]
+        task["Task { }"]
+        group["withTaskGroup"]
+    end
+
+    async --> await
+    actor --> task
+    task --> group
+```
+
+---
+
+## Error Handling
+
+Swift uses do/catch for structured error handling — not exceptions.
+
+| Keyword | Purpose |
+|---------|---------|
+| throws | Function can throw an error |
+| try | Call a throwing function |
+| try? | Convert error to nil |
+| try! | Assert no error (crash if throws) |
+| catch | Handle specific error types |
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---------|-------|-----------|----------|
+| 1-3 | Basics and types | 2h | Essential |
+| 4-5 | Collection types and control flow | 2h | Essential |
+| 6-8 | Functions, closures, enums | 3h | Essential |
+| 9-10 | Classes and structures | 2h | Essential |
+| 11-14 | Protocols, generics, extensions | 3h | Essential |
+| 15-18 | Memory, error handling, concurrency | 3h | Important |
+| 19-22 | Advanced topics | 2h | Optional |

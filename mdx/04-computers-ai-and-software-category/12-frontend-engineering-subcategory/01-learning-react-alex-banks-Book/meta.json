@@ -1,0 +1,28 @@
+{
+  "slug": "01-learning-react-alex-banks",
+  "title": "Learning React",
+  "subtitle": "Modern Patterns for Developing React Apps",
+  "author": "Alex Banks, Eve Porcello",
+  "publicationYear": 2020,
+  "isbn": "9781492051725",
+  "publisher": "O'Reilly Media",
+  "language": "en",
+  "pageCount": 350,
+  "genres": ["Technology", "Web Development", "Frontend", "JavaScript"],
+  "subjects": ["React", "JavaScript", "Frontend Development", "Web Applications", "Hooks", "GraphQL"],
+  "themes": [
+    "Declarative UI development with components",
+    "Hooks as the modern React paradigm",
+    "State management from local to global",
+    "Component composition and reusability",
+    "GraphQL integration with Apollo Client"
+  ],
+  "tags": [
+    "react", "javascript", "frontend", "web-development", "hooks",
+    "graphql", "spa", "alex-banks", "eve-porcello", "oreilly",
+    "components", "state-management"
+  ],
+  "difficulty": "medium",
+  "estimatedReadingHours": 10,
+  "estimatedListeningMinutes": 600
+}

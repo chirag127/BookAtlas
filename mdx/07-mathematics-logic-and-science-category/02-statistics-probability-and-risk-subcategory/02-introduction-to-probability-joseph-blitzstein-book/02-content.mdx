@@ -41,9 +41,13 @@ restriction.
 
 Two identities carry almost the entire book:
 
-$$P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)}$$
+```
+P(A | B) = P(B | A) * P(A) / P(B)
+```
 
-$$P(B) = \sum_i P(B \mid A_i) \, P(A_i)$$ (where $A_i$ is a partition)
+```
+P(B) = sum_i P(B | A_i) * P(A_i)
+``` (where A_i is a partition)
 
 ```mermaid
 flowchart TD
@@ -102,23 +106,23 @@ mindmap
 
 | Family | Story | PMF/PDF | Mean | Variance |
 |---|---|---|---|---|
-| Bernoulli($p$) | Single success/fail trial | $p^x (1-p)^{1-x}$ | $p$ | $p(1-p)$ |
-| Binomial($n,p$) | Count successes in $n$ trials | $\binom{n}{k} p^k (1-p)^{n-k}$ | $np$ | $np(1-p)$ |
-| Geometric($p$) | Trials until 1st success | $(1-p)^{k-1} p$ | $1/p$ | $(1-p)/p^2$ |
-| Poisson($\lambda$) | Rare events at rate $\lambda$ | $e^{-\lambda} \lambda^k / k!$ | $\lambda$ | $\lambda$ |
+| Bernoulli($p$) | Single success/fail trial | `p^x (1-p)^{1-x}` | $p$ | $p(1-p)$ |
+| Binomial($n,p$) | Count successes in $n$ trials | `\binom{n}{k} p^k (1-p)^{n-k}` | $np$ | $np(1-p)$ |
+| Geometric($p$) | Trials until 1st success | `(1-p)^{k-1} p` | $1/p$ | $(1-p)/p^2$ |
+| Poisson($\lambda$) | Rare events at rate $\lambda$ | `e^{-\lambda} \lambda^k / k!` | $\lambda$ | $\lambda$ |
 | Uniform($a,b$) | Equal density on $[a,b]$ | $1/(b-a)$ | $(a+b)/2$ | $(b-a)^2 / 12$ |
-| Normal($\mu, \sigma^2$) | Sum of many small effects | $\frac{1}{\sigma\sqrt{2\pi}} e^{-(x-\mu)^2 / 2\sigma^2}$ | $\mu$ | $\sigma^2$ |
-| Exponential($\lambda$) | Wait for next Poisson event | $\lambda e^{-\lambda x}$ | $1/\lambda$ | $1/\lambda^2$ |
-| Gamma($k, \theta$) | Sum of $k$ Exponential wait times | $\frac{1}{\Gamma(k)} x^{k-1} e^{-x/\theta} / \theta^k$ | $k\theta$ | $k\theta^2$ |
-| Beta($a, b$) | Distribution on probabilities | $\frac{1}{B(a,b)} x^{a-1} (1-x)^{b-1}$ | $a/(a+b)$ | $ab / ((a+b)^2(a+b+1))$ |
+| Normal($\mu, \sigma^2$) | Sum of many small effects | `\frac{1}{\sigma\sqrt{2\pi}} e^{-(x-\mu)^2 / 2\sigma^2}` | $\mu$ | $\sigma^2$ |
+| Exponential($\lambda$) | Wait for next Poisson event | `\lambda e^{-\lambda x}` | $1/\lambda$ | $1/\lambda^2$ |
+| Gamma($k, \theta$) | Sum of $k$ Exponential wait times | `\frac{1}{\Gamma(k)} x^{k-1} e^{-x/\theta} / \theta^k` | $k\theta$ | $k\theta^2$ |
+| Beta($a, b$) | Distribution on probabilities | `\frac{1}{B(a,b)} x^{a-1} (1-x)^{b-1}` | $a/(a+b)$ | $ab / ((a+b)^2(a+b+1))$ |
 
 ---
 
 ## The Universality of the Uniform
 
 A foundational insight: to sample from **any** continuous distribution
-with CDF $F$, take $U \sim \text{Uniform}(0,1)$ and apply
-$F^{-1}(U)$. This is the bridge from discrete to continuous
+with CDF $F$, take `U \sim \text{Uniform}(0,1)` and apply
+`F^{-1}(U)`. This is the bridge from discrete to continuous
 probability and the engine of all simulation.
 
 ```mermaid
@@ -144,9 +148,9 @@ description.
 Two of the most-used tools in the book:
 
 **Fundamental bridge:** for an indicator $I_A$,
-$\mathbb{E}[I_A] = P(A)$.
+`\mathbb{E}[I_A] = P(A)`.
 
-**Linearity:** $\mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y]$
+**Linearity:** `\mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y]`
 — *no independence required.*
 
 ```mermaid
@@ -173,16 +177,16 @@ combinatorics required.
 
 ## Moment Generating Functions
 
-The MGF of a random variable $X$ is $M_X(t) = \mathbb{E}[e^{tX}]$.
+The MGF of a random variable $X$ is `M_X(t) = \mathbb{E}[e^{tX}]`.
 The book's key observation: for **independent** rvs, the MGF of a
 sum is the product of MGFs — far easier than convolving densities.
 
 | Distribution | MGF | Why Useful |
 |---|---|---|
-| Normal($\mu, \sigma^2$) | $e^{\mu t + \sigma^2 t^2 / 2}$ | Sum of Normals is Normal |
-| Poisson($\lambda$) | $e^{\lambda(e^t - 1)}$ | Sum of Poissons is Poisson |
-| Gamma($k, \theta$) | $(1 - \theta t)^{-k}$ | Sum of Gammas is Gamma |
-| Chi-Square($k$) | $(1 - 2t)^{-k/2}$ | Sum of Chi-Squares is Chi-Square |
+| Normal($\mu, \sigma^2$) | `e^{\mu t + \sigma^2 t^2 / 2}` | Sum of Normals is Normal |
+| Poisson($\lambda$) | `e^{\lambda(e^t - 1)}` | Sum of Poissons is Poisson |
+| Gamma($k, \theta$) | `(1 - \theta t)^{-k}` | Sum of Gammas is Gamma |
+| Chi-Square($k$) | `(1 - 2t)^{-k/2}` | Sum of Chi-Squares is Chi-Square |
 
 ```mermaid
 flowchart LR
@@ -219,7 +223,7 @@ $\sum \pi_i = 1$.
 
 The **classification of states** (transient, recurrent, periodic,
 ergodic) and the **reversibility** criterion
-$\pi_i P_{ij} = \pi_j P_{ji}$ are presented cleanly and used to
+`\pi_i P_{ij} = \pi_j P_{ji}` are presented cleanly and used to
 analyze the Google PageRank algorithm as a real-world example.
 
 ---
@@ -263,7 +267,9 @@ the cleanest treatment available at this level.
 The book states the Lindeberg-Levy CLT: for iid rvs $X_1, \ldots,
 X_n$ with mean $\mu$ and variance $\sigma^2$, the standardized sum
 
-$$Z_n = \frac{\sum_i X_i - n\mu}{\sigma \sqrt{n}}$$
+```
+Z_n = (sum_i X_i - n*mu) / (sigma * sqrt(n))
+```
 
 converges in distribution to a standard Normal.
 

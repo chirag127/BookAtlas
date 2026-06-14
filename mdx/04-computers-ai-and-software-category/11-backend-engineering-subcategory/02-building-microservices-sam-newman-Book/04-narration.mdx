@@ -1,0 +1,21 @@
+Welcome to BookAtlas. Today, we explore Building Microservices by Sam Newman, the second edition published in 2021 by O'Reilly Media. At 612 pages, this is the comprehensive guide to designing, building, and operating microservice-based systems.
+
+Sam Newman is a ThoughtWorks veteran who has helped numerous organizations adopt microservices. The second edition reflects how the microservice landscape has matured since the first edition was published in 2015, adding substantial coverage of Kubernetes, serverless, observability, and the important realization that microservices are not always the right choice.
+
+The central thesis of the book is that microservices are independently deployable services modeled around business domains. Newman emphasizes that this is as much an organizational decision as a technical one, rooted in Conway's Law, which states that organizations design systems that mirror their communication structures.
+
+Newman starts with service decomposition, recommending that you use bounded contexts from Domain-Driven Design to identify service boundaries. He advises against a big bang microservice adoption, instead recommending that you start with a well-structured monolith and extract microservices as you discover natural boundaries through experience. This pragmatic advice sets the tone for the entire book.
+
+For inter-service communication, Newman covers the full spectrum from synchronous REST and gRPC to asynchronous messaging with brokers. He explains the trade-offs clearly. Synchronous communication is simpler and more intuitive but creates temporal coupling between services. Asynchronous communication provides resilience and scalability but adds complexity in message handling, idempotency, and error recovery.
+
+The data management chapter is one of the most important. Newman advocates strongly for the database-per-service pattern, which prevents tight coupling through shared schemas. This creates a new challenge, however. Maintaining data consistency across services requires patterns like sagas for eventual consistency and CQRS for separating read and write models. Newman acknowledges that this is the area where microservices introduce the most significant complexity compared to monolithic architectures.
+
+Observability is treated as non-negotiable. Newman argues that centralized logging, metrics, and distributed tracing are essential for operating microservices at scale. Without these three pillars, debugging a failed request across services becomes nearly impossible. The book covers the practical tooling for each pillar.
+
+The testing chapter presents a notable shift from the traditional testing pyramid. Newman advocates for a testing trophy approach that emphasizes contract tests and integration tests over unit tests. Contract tests, using tools like Pact, verify that service interactions match expectations. This approach catches integration issues before deployment.
+
+The second edition's coverage of Kubernetes and containers reflects the industry's convergence on container orchestration as the standard deployment platform. Newman covers the key Kubernetes concepts that microservice operators need to understand: pods, services, deployments, and ingress.
+
+On the organizational side, Newman discusses team topology, recommending that teams be aligned with service boundaries. He also addresses the important question of when not to use microservices. Teams smaller than five developers, simple CRUD applications, and organizations without strong DevOps practices should think carefully before adopting the microservice architecture.
+
+Building Microservices earns an 8.5 out of 10 on the BookAtlas scale. It is essential reading for anyone considering or already building microservices. Newman balances enthusiasm with caution, clearly laying out when microservices help and when they hurt. This has been a BookAtlas narration of Building Microservices by Sam Newman. Thanks for listening.

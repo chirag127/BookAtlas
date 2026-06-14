@@ -51,6 +51,7 @@ export default defineConfig({
         '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
         '@lib': fileURLToPath(new URL('./src/lib', import.meta.url)),
         '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
+        '@bookatlas/components': fileURLToPath(new URL('./src/lib/bookatlas-components.tsx', import.meta.url)),
       },
     },
     ssr: {

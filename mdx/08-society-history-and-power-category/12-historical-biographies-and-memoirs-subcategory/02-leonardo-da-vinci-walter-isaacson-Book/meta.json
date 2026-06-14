@@ -1,0 +1,22 @@
+{
+  "id": "leonardo-da-vinci-walter-isaacson",
+  "slug": "leonardo-da-vinci-walter-isaacson",
+  "title": "Leonardo da Vinci",
+  "subtitle": null,
+  "authors": ["Walter Isaacson"],
+  "year": 2017,
+  "category": "Society, History & Power",
+  "subcategory": "Historical Biographies and Memoirs",
+  "pages": 624,
+  "isbn": "9781501139154",
+  "language": "en",
+  "genres": ["Biography", "Art History", "History", "Nonfiction"],
+  "subjects": ["Leonardo da Vinci", "Renaissance", "Art History", "Biography", "Creativity"],
+  "themes": ["Genius and Curiosity", "Art and Science", "Interdisciplinary Thinking"],
+  "tags": ["leonardo-da-vinci", "renaissance", "biography", "walter-isaacson", "art-history", "genius", "creativity", "renaissance-man", "italian-renaissance"],
+  "difficulty": "easy-medium",
+  "estimatedReadingHours": 13,
+  "estimatedListeningMinutes": 780,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

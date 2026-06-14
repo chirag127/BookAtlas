@@ -1,0 +1,28 @@
+{
+  "slug": "03-the-culture-map-erin-meyer",
+  "title": "The Culture Map",
+  "subtitle": "Breaking Through the Invisible Boundaries of Global Business",
+  "author": "Erin Meyer",
+  "publicationYear": 2014,
+  "isbn": "9781610392761",
+  "publisher": "PublicAffairs",
+  "language": "en",
+  "pageCount": 288,
+  "genres": ["Business", "Cross-Cultural Studies", "Communication", "Leadership"],
+  "subjects": ["Cross-Cultural Communication", "Global Business", "Leadership", "Management", "Cultural Intelligence"],
+  "themes": [
+    "Low-context vs. high-context communication",
+    "Direct vs. indirect feedback cultures",
+    "Egalitarian vs. hierarchical leadership",
+    "Consensus vs. top-down decision-making",
+    "Task-based vs. relationship-based trust building"
+  ],
+  "tags": [
+    "cross-cultural", "global-business", "leadership", "communication",
+    "culture", "erin-meyer", "international-business", "cultural-intelligence",
+    "INSEAD", "cross-cultural-management", "global-teams"
+  ],
+  "difficulty": "easy-medium",
+  "estimatedReadingHours": 5,
+  "estimatedListeningMinutes": 300
+}

@@ -1,0 +1,131 @@
+---
+title: Core Concepts
+subtitle: Components, Navigation, Native Modules, and Performance Optimization
+---
+
+## React Native's Architecture
+
+React Native uses a JavaScript-to-native bridge to render platform UI
+components, not web views.
+
+```mermaid
+graph TD
+    subgraph RN_Arch["React Native Architecture"]
+        JS["JavaScript Thread<br/>(React, business logic)"]
+        NB["Native Bridge<br/>(JSON serialization)"]
+        MT["Main Thread<br/>(UIKit/Android Views)"]
+        SH["Shadow Thread<br/>(layout calculation)"]
+    end
+
+    JS <--> NB
+    NB --> MT
+    NB --> SH
+```
+
+---
+
+## Core Components
+
+| Component | Description | Web Equivalent |
+|-----------|-------------|---------------|
+| View | Container | div |
+| Text | Text display | span or p |
+| TextInput | Text input | input |
+| ScrollView | Scrollable container | overflow: scroll |
+| FlatList | Virtualized list | -- |
+| TouchableOpacity | Pressable element | button |
+| Image | Image display | img |
+
+---
+
+## Navigation
+
+React Native uses native navigation, not browser routing.
+
+```mermaid
+graph TD
+    subgraph Navigation_Types["Navigation Types"]
+        SN["Stack Navigator<br/>(push/pop screens)"]
+        TN["Tab Navigator<br/>(bottom/top tabs)"]
+        DN["Drawer Navigator<br/>(side menu)"]
+    end
+
+    subgraph Flow["Example Navigation Flow"]
+        A["Home Screen (Tab)"]
+        B["Profile Screen (Stack)"]
+        C["Settings Screen (Stack)"]
+        D["Login Screen (Modal)"]
+    end
+
+    A --> B --> C
+    D -->|"present"| A
+```
+
+---
+
+## State Management
+
+React Native supports the same state management options as React web:
+
+| Approach | Best For | Complexity |
+|----------|----------|------------|
+| Component state (useState) | Simple local UI state | Low |
+| Context API | Global theme, auth | Medium |
+| Redux | Complex app state | High |
+| MobX | Observable-based state | Medium |
+| Zustand | Simple global state | Low |
+
+---
+
+## Native Modules
+
+When React Native lacks an API, native modules bridge the gap.
+
+```mermaid
+flowchart LR
+    subgraph Native_Module["Native Module Flow"]
+        JS["JavaScript Call"]
+        JB["JSON Bridge Serialization"]
+        NM["Native Module<br/>(Swift/Kotlin)"]
+        RP["Return Promise"]
+    end
+
+    JS --> JB --> NM --> RP --> JS
+```
+
+---
+
+## Platform-Specific Code
+
+| Strategy | Implementation |
+|----------|---------------|
+| Platform.select | if (Platform.OS === 'ios') |
+| File extension | Button.ios.js / Button.android.js |
+| Platform-specific API | Check Platform.OS at runtime |
+
+---
+
+## Performance Optimization
+
+| Technique | Impact |
+|-----------|--------|
+| FlatList instead of ScrollView | Virtualized rendering |
+| PureComponent / React.memo | Skip unnecessary re-renders |
+| Native driver for animations | Offload to UI thread |
+| Hermes engine | Faster JS startup |
+| Image caching | Network image optimization |
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---------|-------|-----------|----------|
+| 1-3 | React Native fundamentals | 2h | Essential |
+| 4-5 | Components and styling | 2h | Essential |
+| 6-7 | Navigation | 1.5h | Essential |
+| 8 | State management | 2h | Essential |
+| 9 | Networking and data | 1h | Important |
+| 10 | Native modules | 1.5h | Optional |
+| 11 | Performance | 1h | Important |
+| 12 | Deployment | 1h | Important |

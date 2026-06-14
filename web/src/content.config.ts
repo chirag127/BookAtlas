@@ -67,7 +67,7 @@ const relatedBookSchema = z
   .transform((b) => (typeof b === 'string' ? b : b.title));
 
 const overview = defineCollection({
-  loader: glob({ pattern: '**/00-index.mdx', base: '../knowledge' }),
+  loader: glob({ pattern: '**/00-index.mdx', base: '../mdx' }),
   schema: z
     .object({
       title: z.string().default(''),
@@ -80,21 +80,21 @@ const overview = defineCollection({
 });
 
 const content = defineCollection({
-  loader: glob({ pattern: '**/02-content.mdx', base: '../knowledge' }),
+  loader: glob({ pattern: '**/02-content.mdx', base: '../mdx' }),
   schema: z
     .object({ title: z.string().default('') })
     .transform((d) => ({ title: d.title })),
 });
 
 const analysis = defineCollection({
-  loader: glob({ pattern: '**/03-analysis.mdx', base: '../knowledge' }),
+  loader: glob({ pattern: '**/03-analysis.mdx', base: '../mdx' }),
   schema: z
     .object({ title: z.string().default('') })
     .transform((d) => ({ title: d.title })),
 });
 
 const narration = defineCollection({
-  loader: glob({ pattern: '**/04-narration.mdx', base: '../knowledge' }),
+  loader: glob({ pattern: '**/04-narration.mdx', base: '../mdx' }),
   schema: z
     .object({ title: z.string().default('') })
     .transform((d) => ({ title: d.title })),
@@ -102,7 +102,7 @@ const narration = defineCollection({
 
 export const collections = {
   books: defineCollection({
-    loader: glob({ pattern: '**/meta.json', base: '../knowledge' }),
+    loader: glob({ pattern: '**/meta.json', base: '../mdx' }),
     schema: z
       .object({
         slug: z.string(),

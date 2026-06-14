@@ -1,0 +1,22 @@
+{
+  "id": "the-elements-of-style-strunk-white",
+  "slug": "the-elements-of-style-strunk-white",
+  "title": "The Elements of Style",
+  "subtitle": null,
+  "authors": ["William Strunk Jr.", "E.B. White"],
+  "year": 1999,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Dictionaries and Language Reference",
+  "pages": 105,
+  "isbn": "9780205309023",
+  "language": "en",
+  "genres": ["Language", "Style Guide", "Reference", "Writing"],
+  "subjects": ["English Language", "Writing Style", "Grammar", "Rhetoric"],
+  "themes": ["Clarity in Writing", "Linguistic Authority", "Composition"],
+  "tags": ["writing", "grammar", "style", "English", "usage", "composition", "reference", "editing"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 2,
+  "estimatedListeningMinutes": 120,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

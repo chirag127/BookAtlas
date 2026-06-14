@@ -1,0 +1,22 @@
+{
+  "id": "national-geographic-atlas-of-the-world-national-geographic",
+  "slug": "national-geographic-atlas-of-the-world-national-geographic",
+  "title": "National Geographic Atlas of the World",
+  "subtitle": "11th Edition",
+  "authors": ["National Geographic"],
+  "year": 2019,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Atlases and Geography Reference",
+  "pages": 448,
+  "isbn": "9781426220586",
+  "language": "en",
+  "genres": ["Atlas", "Reference", "Geography", "Cartography"],
+  "subjects": ["World Maps", "Geography", "Cartography", "Earth Sciences"],
+  "themes": ["Physical Geography", "Political Geography", "Global Issues", "Exploration"],
+  "tags": ["atlas", "geography", "world-maps", "cartography", "reference", "national-geographic", "maps", "globes"],
+  "difficulty": "medium",
+  "estimatedReadingHours": 18,
+  "estimatedListeningMinutes": 1080,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

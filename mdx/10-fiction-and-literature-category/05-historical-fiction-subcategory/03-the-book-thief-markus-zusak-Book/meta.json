@@ -1,0 +1,17 @@
+{
+  "slug": "book-thief-markus-zusak",
+  "title": "The Book Thief",
+  "author": "Markus Zusak",
+  "publicationYear": 2005,
+  "isbn": "9780375842207",
+  "publisher": "Knopf",
+  "language": "en",
+  "genres": ["Fiction", "Historical Fiction", "Young Adult", "War Literature"],
+  "subjects": ["Holocaust", "World War II", "Germany", "Books and Reading", "Death"],
+  "themes": ["Power of Words", "Childhood in War", "Ordinary Evil", "Resistance and Complicity", "Love and Loss"],
+  "tags": ["historical fiction", "WWII", "Holocaust", "books", "death narration", "Germany", "young adult", "war", "survival", "Nazi Germany"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 9,
+  "estimatedListeningMinutes": 600,
+  "excerpt": "Narrated by Death itself, this is the story of a young German girl named Liesel Meminger who steals books during the Holocaust—and in doing so, discovers the power of words to sustain hope in the darkest of times."
+}

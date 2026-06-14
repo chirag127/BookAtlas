@@ -1,0 +1,22 @@
+{
+  "id": "factfulness-hans-rosling",
+  "slug": "factfulness-hans-rosling",
+  "title": "Factfulness: Ten Reasons We're Wrong About the World — and Why Things Are Better Than You Think",
+  "subtitle": null,
+  "authors": ["Hans Rosling", "Ola Rosling", "Anna Rosling Rönnlund"],
+  "year": 2018,
+  "category": "Reference & General Knowledge",
+  "subcategory": "General Knowledge Handbooks",
+  "pages": 352,
+  "isbn": "9781250107817",
+  "language": "en",
+  "genres": ["Nonfiction", "Data Science", "Psychology", "Sociology"],
+  "subjects": ["Statistics", "Global Health", "Development", "Critical Thinking"],
+  "themes": ["Global Progress", "Cognitive Bias", "Data Literacy"],
+  "tags": ["statistics", "global-health", "data-literacy", "optimism", "development", "misconceptions", "critical-thinking", "cognitive-bias", "progress", "Gapminder"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 6,
+  "estimatedListeningMinutes": 360,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

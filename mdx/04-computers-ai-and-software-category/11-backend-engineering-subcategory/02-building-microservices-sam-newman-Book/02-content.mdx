@@ -1,0 +1,141 @@
+---
+title: Core Concepts
+subtitle: Service Decomposition, Communication, Data Management, and Production Operations
+---
+
+## The Microservice Mindset
+
+Microservices are independently deployable services modeled around
+business domains. Each service owns its data, runs in its own process,
+and communicates via well-defined APIs.
+
+```mermaid
+graph TD
+    subgraph Monolith["Monolithic Architecture"]
+        UI["User Interface"]
+        BL["Business Logic"]
+        DB["Database"]
+        UI --> BL --> DB
+    end
+
+    subgraph Microservices["Microservice Architecture"]
+        S1["Service A<br/>(Orders)"]
+        S2["Service B<br/>(Payments)"]
+        S3["Service C<br/>(Shipping)"]
+        S4["Service D<br/>(Notifications)"]
+        GW["API Gateway"]
+        GW --> S1
+        GW --> S2
+        GW --> S3
+        GW --> S4
+    end
+```
+
+---
+
+## Service Decomposition
+
+Newman recommends using bounded contexts from Domain-Driven Design to
+identify service boundaries.
+
+| Decomposition Strategy | Approach | Best For |
+|----------------------|----------|----------|
+| Business capability | Map to business functions | Stable domains |
+| Subdomain | Follow DDD bounded contexts | Complex domains |
+| Volatility | Separate by change frequency | Rapidly evolving features |
+
+---
+
+## Inter-Service Communication
+
+```mermaid
+flowchart LR
+    subgraph Synchronous["Synchronous"]
+        R["REST / gRPC"]
+        R -->|"Request/Response"| S["Service"]
+    end
+
+    subgraph Asynchronous["Asynchronous"]
+        M["Message Broker"]
+        P["Producer"] --> M
+        M --> C["Consumer 1"]
+        M --> C2["Consumer 2"]
+    end
+```
+
+---
+
+## Data Management
+
+The database-per-service pattern is central to microservices:
+
+```mermaid
+graph TD
+    subgraph Service_Data["Data per Service"]
+        S1["Order Service"] --> DB1["Order DB"]
+        S2["Payment Service"] --> DB2["Payment DB"]
+        S3["Shipping Service"] --> DB3["Shipping DB"]
+    end
+
+    subgraph Patterns["Data Sharing Patterns"]
+        P1["Saga Pattern<br/>(eventual consistency)"]
+        P2["CQRS<br/>(read vs write models)"]
+        P3["Event Sourcing<br/>(event store)"]
+    end
+```
+
+---
+
+## Observability
+
+| Pillar | Tool Examples | What It Answers |
+|--------|--------------|-----------------|
+| Logging | ELK Stack, Loki | What happened? |
+| Metrics | Prometheus, Datadog | When did it happen? |
+| Tracing | Jaeger, Zipkin | Where did it happen? |
+
+---
+
+## Testing Strategy
+
+Newman advocates moving from the testing pyramid to a testing trophy:
+
+1. **Unit tests** — fast, isolated, high coverage
+2. **Contract tests** — verify service interactions
+3. **Integration tests** — test against real dependencies
+4. **End-to-end tests** — critical paths only
+
+---
+
+## Deployment and Containers
+
+```mermaid
+graph LR
+    subgraph Pipeline["CI/CD Pipeline"]
+        C["Commit"] --> B["Build"]
+        B --> T["Test"]
+        T --> P["Package (Docker)"]
+        P --> D["Deploy"]
+    end
+
+    subgraph Orchestration["Orchestration"]
+        D --> K["Kubernetes"]
+        K --> N1["Pod 1"]
+        K --> N2["Pod 2"]
+        K --> N3["Pod 3"]
+    end
+```
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---------|-------|-----------|----------|
+| 1-2 | Microservice fundamentals | 2h | Essential |
+| 3-4 | Decomposition and DDD | 2.5h | Essential |
+| 5-6 | Communication patterns | 3h | Essential |
+| 7-8 | Data and transactions | 2.5h | Essential |
+| 9-10 | Testing and deployment | 3h | Important |
+| 11-13 | Monitoring and security | 2h | Important |
+| 14-16 | Organizational and migration | 2h | Important |

@@ -1,0 +1,22 @@
+{
+  "id": "remarkable-facts-bob-morse",
+  "slug": "remarkable-facts-bob-morse",
+  "title": "The Little Book of Remarkable Facts",
+  "subtitle": null,
+  "authors": ["Bob Morse"],
+  "year": 1995,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Fact Books and Almanacs",
+  "pages": 208,
+  "isbn": "9780761101259",
+  "language": "en",
+  "genres": ["Trivia", "Reference", "Humor"],
+  "subjects": ["Curiosities", "Facts", "Reference", "General Knowledge"],
+  "themes": ["Wonder and Curiosity", "Surprising Knowledge", "The Joy of Discovery"],
+  "tags": ["facts", "trivia", "reference", "knowledge", "curiosity", "surprising-facts", "general-knowledge", "entertainment"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 3,
+  "estimatedListeningMinutes": 180,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

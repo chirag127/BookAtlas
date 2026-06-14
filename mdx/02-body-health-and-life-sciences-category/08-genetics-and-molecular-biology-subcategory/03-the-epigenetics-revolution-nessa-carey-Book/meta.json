@@ -1,0 +1,54 @@
+{
+  "id": "the-epigenetics-revolution-nessa-carey",
+  "title": "The Epigenetics Revolution: How Modern Biology Is Rewriting Our Understanding of Genetics, Disease, and Inheritance",
+  "slug": "03-the-epigenetics-revolution-nessa-carey",
+  "authors": [
+    "Nessa Carey"
+  ],
+  "year": 2012,
+  "category": "02-medicine-health-sciences",
+  "subcategory": "genetics-and-molecular-biology",
+  "pages": 352,
+  "isbn": "9781848313477",
+  "publisher": "Icon Books",
+  "language": "en",
+  "genres": [
+    "Science",
+    "Genetics",
+    "Molecular Biology",
+    "Popular Science"
+  ],
+  "subjects": [
+    "Epigenetics",
+    "DNA Methylation",
+    "Histone Modification",
+    "Gene Regulation",
+    "Genomic Imprinting",
+    "X-Inactivation",
+    "Cancer Epigenetics",
+    "Transgenerational Inheritance"
+  ],
+  "themes": [
+    "Genes vs Epigenetic Regulation",
+    "Environmental Influences on Gene Expression",
+    "Cellular Memory and Identity",
+    "Epigenetics in Development and Disease",
+    "The Limits of Genetic Determinism"
+  ],
+  "tags": [
+    "epigenetics",
+    "genetics",
+    "Nessa Carey",
+    "DNA methylation",
+    "histone modification",
+    "gene regulation",
+    "chromatin",
+    "genomic imprinting",
+    "molecular biology",
+    "cancer epigenetics"
+  ],
+  "difficulty": "medium",
+  "estimatedReadingHours": 10,
+  "excerpt": "The definitive popular introduction to epigenetics—the science of how genes are turned on and off. Carey explains the molecular mechanisms of epigenetic regulation and their role in development, disease, aging, and inheritance.",
+  "rationale": "Root book #3 for genetics-and-molecular-biology. The Epigenetics Revolution provides the essential companion to Genome, explaining the regulatory layer that controls how the genome is read. Together, these books cover the complete molecular genetics foundation for the subcategory."
+}

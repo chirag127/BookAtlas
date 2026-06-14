@@ -1,0 +1,139 @@
+---
+title: Core Concepts
+subtitle: Components, Hooks, State Management, and the React Ecosystem
+---
+
+## React's Core Mental Model
+
+React is a declarative, component-based library for building user
+interfaces. The key insight: describe what the UI should look like
+for any given state, and React handles the DOM updates efficiently.
+
+```mermaid
+graph TD
+    subgraph React_Flow["React Data Flow"]
+        S["State (data)"] --> R["React Component"]
+        R --> V["Virtual DOM"]
+        V --> D["Real DOM (minimal updates)"]
+    end
+
+    subgraph Unidirectional["Unidirectional Flow"]
+        P["Props (parent)"] --> C["Component"]
+        C --> E["Events (child)"]
+        E --> P
+    end
+```
+
+---
+
+## Components and JSX
+
+Components are the building blocks of React. JSX is syntactic sugar
+for React.createElement calls.
+
+| Rendering Type | When to Use |
+|---------------|-------------|
+| Conditional Rendering | Show/hide based on state |
+| List Rendering | Display arrays of data |
+| Composition | Build complex UIs from small components |
+
+---
+
+## Hooks
+
+Hooks replace class lifecycle methods with functional primitives.
+
+```mermaid
+flowchart LR
+    subgraph Core_Hooks["Core Hooks"]
+        US["useState<br/>Local state"]
+        UE["useEffect<br/>Side effects"]
+        UC["useContext<br/>Access context"]
+        UR["useReducer<br/>Complex state"]
+        UM["useMemo<br/>Memoization"]
+        UC2["useCallback<br/>Callback memo"]
+        UR2["useRef<br/>DOM references"]
+    end
+
+    subgraph Patterns["Common Patterns"]
+        CP["Custom Hooks<br/>Extract logic"]
+        CC["Context + useReducer<br/>Global state"]
+    end
+
+    Core_Hooks --> Patterns
+```
+
+---
+
+## State Management
+
+State management scales through tiers:
+
+```mermaid
+graph TD
+    subgraph State_Layers["State Management Tiers"]
+        T1["Tier 1: Component State<br/>useState, useReducer"]
+        T2["Tier 2: Lifted State<br/>Props drilling"]
+        T3["Tier 3: Context API<br/>Global state without libraries"]
+        T4["Tier 4: External Libraries<br/>Redux, Zustand, Jotai"]
+    end
+
+    T1 --> T2 --> T3 --> T4
+```
+
+---
+
+## React Router
+
+Client-side routing enables single-page applications:
+
+| Route Type | Purpose |
+|-----------|---------|
+| Static routes | Fixed URL paths |
+| Dynamic routes | URL parameters |
+| Nested routes | Layout inheritance |
+| Protected routes | Authentication gates |
+
+---
+
+## GraphQL with Apollo
+
+```mermaid
+graph LR
+    subgraph Apollo["Apollo Client in React"]
+        C["React Component"]
+        Q["useQuery Hook"]
+        M["useMutation Hook"]
+        AP["Apollo Client"]
+        S["GraphQL Server"]
+    end
+
+    C --> Q
+    C --> M
+    Q --> AP --> S
+    M --> AP --> S
+```
+
+---
+
+## Testing React
+
+| Test Type | Tool | What It Tests |
+|-----------|------|--------------|
+| Component rendering | React Testing Library | What users see |
+| User interactions | fireEvent / userEvent | Button clicks, form input |
+| State changes | render + act | Hook and state behavior |
+| Integration | MSW + Testing Library | Full component flows |
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---------|-------|-----------|----------|
+| 1-3 | React fundamentals | 2h | Essential |
+| 4-5 | Hooks deep dive | 3h | Essential |
+| 6 | State management | 1.5h | Essential |
+| 7 | React Router | 1h | Important |
+| 8 | GraphQL | 1.5h | Optional |
+| 9-10 | Testing and deployment | 1h | Important |

@@ -1,0 +1,22 @@
+{
+  "id": "the-book-of-general-ignorance-john-lloyd",
+  "slug": "the-book-of-general-ignorance-john-lloyd",
+  "title": "The Book of General Ignorance",
+  "subtitle": null,
+  "authors": ["John Lloyd", "John Mitchinson"],
+  "year": 2006,
+  "category": "Reference & General Knowledge",
+  "subcategory": "General Knowledge Handbooks",
+  "pages": 304,
+  "isbn": "9780307394910",
+  "language": "en",
+  "genres": ["Trivia", "Humor", "Reference", "Popular Science"],
+  "subjects": ["Common Misconceptions", "Trivia", "General Knowledge"],
+  "themes": ["Debunking Myths", "Critical Thinking", "Intellectual Humility"],
+  "tags": ["trivia", "general-knowledge", "facts", "misconceptions", "humor", "QI", "knowledge", "popular-science", "debunking", "curiosity"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 5,
+  "estimatedListeningMinutes": 300,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

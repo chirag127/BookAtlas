@@ -1,0 +1,28 @@
+{
+  "slug": "01-getting-to-yes-roger-fisher",
+  "title": "Getting to Yes",
+  "subtitle": "Negotiating Agreement Without Giving In",
+  "author": "Roger Fisher, William Ury, Bruce Patton",
+  "publicationYear": 2011,
+  "isbn": "9780143118756",
+  "publisher": "Penguin",
+  "language": "en",
+  "pageCount": 240,
+  "genres": ["Business", "Negotiation", "Conflict Resolution", "Self-Help"],
+  "subjects": ["Negotiation", "Conflict Resolution", "Mediation", "BATNA", "Communication"],
+  "themes": [
+    "Separating people from problems in negotiation",
+    "Focusing on interests rather than positions",
+    "Inventing options for mutual gain",
+    "Using objective criteria to resolve differences",
+    "Leveraging BATNA as a source of negotiating power"
+  ],
+  "tags": [
+    "negotiation", "conflict-resolution", "BATNA", "principled-negotiation",
+    "mediation", "roger-fisher", "harvard-negotiation-project", "win-win",
+    "william-ury", "bruce-patton", "interest-based-bargaining"
+  ],
+  "difficulty": "easy",
+  "estimatedReadingHours": 4,
+  "estimatedListeningMinutes": 240
+}

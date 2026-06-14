@@ -141,9 +141,9 @@ The canonical DP pattern:
 | Problem | Table Size | Recurrence |
 |---------|-----------|------------|
 | Rod cutting | O(n) | r_n = max(p_n, r_1 + r_{n-1}, ..., r_{n-1} + r_1) |
-| Matrix-chain | O(n^2) | $m[i,j] = \min_{i \le k \lt j}(m[i,k] + m[k+1,j] + p_{i-1} p_k p_j)$ |
+| Matrix-chain | O(n^2) | `m[i,j] = \min_{i \le k \lt j}(m[i,k] + m[k+1,j] + p_{i-1} p_k p_j)` |
 | LCS | O(mn) | c[i,j] = 0 (if i=0 or j=0); c[i-1,j-1]+1 (if x_i=y_j); max(c[i-1,j], c[i,j-1]) (else) |
-| Optimal BST | O(n^3) | $e[i,j] = \min_{i \le r \le j}(e[i,r-1] + e[r+1,j] + w(i,j))$ |
+| Optimal BST | O(n^3) | `e[i,j] = \min_{i \le r \le j}(e[i,r-1] + e[r+1,j] + w(i,j))` |
 | Bitmask TSP | O(n^2 2^n) | $dp[\text&#123;mask&#125;][v] = \min(dp[\text&#123;mask&#125; \setminus \&#123;v\&#125;][u] + w(u,v))$ |
 
 ---

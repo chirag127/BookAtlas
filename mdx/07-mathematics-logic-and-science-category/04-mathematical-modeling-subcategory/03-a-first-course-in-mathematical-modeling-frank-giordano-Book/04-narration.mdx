@@ -1,0 +1,56 @@
+---
+title: "A First Course in Mathematical Modeling — Narration Script"
+part: 3
+tts: true
+---
+
+A First Course in Mathematical Modeling by Giordano, Fox, and
+Horton teaches you how to translate real-world problems into
+mathematical language. It covers three modeling paradigms:
+optimization, probability and simulation, and discrete models.
+
+The modeling process has five steps. First, identify the problem:
+what decision needs to be made? Second, state your assumptions:
+what are you simplifying and why? Third, translate into mathematics.
+Fourth, solve the mathematical problem. Fifth, validate: does the
+solution make sense? If not, return to step two.
+
+Linear programming is the most widely used optimization technique.
+A factory has limited labor and materials. Each product generates
+profit. How many of each should you produce? The constraints form
+a polygon. The optimal solution is always at a vertex. The simplex
+algorithm finds it efficiently.
+
+When solutions must be whole numbers, we use integer programming.
+You cannot build three point seven factories. Branch and bound
+solves these problems by systematically exploring the space of
+integer solutions.
+
+Probability models capture uncertainty. The newsvendor model
+decides how many newspapers to order when demand is uncertain.
+The optimal order depends on the ratio of overage cost to underage
+cost — how much you lose from ordering too many versus too few.
+
+Monte Carlo simulation is the universal fallback. When you cannot
+solve a model analytically, simulate it. Generate thousands of
+random scenarios, compute the outcome for each, and analyze the
+distribution. The accuracy improves as the square root of the
+number of trials.
+
+Difference equations model discrete-time dynamics. The logistic
+map, x(t+1) equals r x(t) times one minus x(t), is a simple
+equation that produces extraordinary complexity. As r increases,
+the system goes from a fixed point to cycles of period two, four,
+eight — and then to chaos.
+
+Graph theory models networks. Dijkstra's algorithm finds the
+shortest path through a network. The traveling salesman problem
+finds the shortest tour visiting all cities. It is NP-hard —
+for large instances, we must use heuristics that find good
+solutions without guaranteeing optimality.
+
+The book's central message is that modeling is a craft. It requires
+judgment about what to include, what to simplify, and which
+paradigm to use. No single model is right. The goal is to build
+models that are useful — that improve decisions, reveal insights,
+and deepen understanding.

@@ -1,0 +1,155 @@
+---
+title: Core Concepts
+subtitle: The Cascade, Box Model, Layout Systems, and Modern CSS Features
+---
+
+## The Cascade and Specificity
+
+The cascade is the algorithm that resolves conflicting CSS declarations.
+
+```mermaid
+graph TD
+    subgraph Cascade_Layers["Cascade Algorithm"]
+        O["Origin & Importance<br/>(user agent > user > author)"]
+        I["Specificity<br/>(inline > IDs > classes > tags)"]
+        O["Order<br/>(later declarations override earlier)"]
+    end
+
+    subgraph Specificity_Calc["Specificity Calculation"]
+        A["A: Inline styles<br/>1,0,0,0"]
+        B["B: ID selectors<br/>0,1,0,0"]
+        C["C: Class selectors<br/>0,0,1,0"]
+        D["D: Element selectors<br/>0,0,0,1"]
+    end
+
+    Cascade_Layers --> Specificity_Calc
+```
+
+---
+
+## Box Model
+
+Every element generates a box with four areas:
+
+```mermaid
+graph TD
+    subgraph Box_Model["CSS Box Model"]
+        M["Margin<br/>(transparent space outside)"]
+        B["Border<br/>(visual boundary)"]
+        P["Padding<br/>(space inside border)"]
+        C["Content<br/>(text, images, children)"]
+    end
+
+    M --> B --> P --> C
+```
+
+| Property | Controls | Default |
+|----------|----------|---------|
+| width / height | Content area | auto |
+| padding | Inner spacing | 0 |
+| border | Edge line | none |
+| margin | Outer spacing | 0 |
+
+---
+
+## Layout Systems
+
+```mermaid
+flowchart TD
+    subgraph Layout_Methods["CSS Layout Methods"]
+        F["Normal Flow<br/>(default, block/inline)"]
+        P["Positioning<br/>(relative, absolute, fixed)"]
+        FL["Flexbox<br/>(1D layout)"]
+        G["Grid<br/>(2D layout)"]
+        MC["Multi-Column<br/>(text columns)"]
+    end
+
+    subgraph Use_Cases["Best Use Cases"]
+        F_U["Document flow"]
+        P_U["Overlays, tooltips"]
+        FL_U["Nav bars, centering, card rows"]
+        G_U["Page layouts, dashboards"]
+        MC_U["Article text, magazines"]
+    end
+
+    F --> F_U
+    P --> P_U
+    FL --> FL_U
+    G --> G_U
+    MC --> MC_U
+```
+
+---
+
+## Flexbox
+
+One-dimensional layout for distributing space along a single axis.
+
+| Container Property | Purpose |
+|-------------------|---------|
+| display: flex | Enable flexbox |
+| flex-direction | Row or column |
+| justify-content | Main axis alignment |
+| align-items | Cross axis alignment |
+| flex-wrap | Allow wrapping |
+
+---
+
+## Grid
+
+Two-dimensional layout for rows and columns simultaneously.
+
+```mermaid
+graph TD
+    subgraph Grid_Example["CSS Grid Example"]
+        H["header<br/>grid-area: header"]
+        N["nav<br/>grid-area: nav"]
+        M["main<br/>grid-area: main"]
+        S["sidebar<br/>grid-area: sidebar"]
+        F["footer<br/>grid-area: footer"]
+    end
+
+    H --> N
+    H --> M
+    H --> S
+    N --> F
+    M --> F
+    S --> F
+```
+
+---
+
+## Custom Properties
+
+CSS Custom Properties (variables) enable dynamic theming:
+
+| Feature | Benefit |
+|---------|---------|
+| --property-name | Declare a custom property |
+| var(--name) | Use the value |
+| Cascade inheritance | Override per component |
+| JavaScript access | Read/write via style.setProperty |
+
+---
+
+## Responsive Design
+
+| Technique | Description |
+|-----------|-------------|
+| Media Queries | Respond to viewport size |
+| Container Queries | Respond to container size |
+| Fluid typography | clamp() for responsive text |
+| Relative units | rem, em, %, vw, vh |
+
+---
+
+## Reading Guide
+
+| Chapter | Topic | Est. Time | Priority |
+|---------|-------|-----------|----------|
+| 1-3 | Selectors and cascade | 3h | Essential |
+| 4-7 | Box model and values | 4h | Essential |
+| 8-10 | Layout (Flexbox, Grid) | 5h | Essential |
+| 11-13 | Typography and color | 3h | Important |
+| 14-16 | Transforms and transitions | 3h | Important |
+| 17-19 | Responsive and modern CSS | 3h | Important |

@@ -1,0 +1,154 @@
+---
+title: Core Concepts
+subtitle: The Twelve Factors of Cloud-Native Application Design
+---
+
+## Overview of the Twelve Factors
+
+The twelve factors form a complete methodology for building applications
+that are portable, resilient, and suitable for modern cloud platforms.
+
+```mermaid
+graph TD
+    subgraph Twelve_Factors["The Twelve Factors"]
+        F1["1. Codebase<br/>One codebase per app, tracked in VCS"]
+        F2["2. Dependencies<br/>Explicit declaration and isolation"]
+        F3["3. Config<br/>Store config in environment variables"]
+        F4["4. Backing Services<br/>Treat as attached resources"]
+        F5["5. Build, Release, Run<br/>Strict separation of stages"]
+        F6["6. Processes<br/>Execute as stateless processes"]
+        F7["7. Port Binding<br/>Export services via port"]
+        F8["8. Concurrency<br/>Scale out via process model"]
+        F9["9. Disposability<br/>Fast startup, graceful shutdown"]
+        F10["10. Dev/Prod Parity<br/>Keep environments similar"]
+        F11["11. Logs<br/>Treat as event streams"]
+        F12["12. Admin Processes<br/>Run as one-off processes"]
+    end
+```
+
+---
+
+## Factor 1: Codebase
+
+One codebase tracked in revision control, many deploys.
+
+```mermaid
+graph LR
+    C["Codebase (Git Repo)"]
+    C --> D1["Production Deploy"]
+    C --> D2["Staging Deploy"]
+    C --> D3["Developer Deploy"]
+```
+
+---
+
+## Factor 2: Dependencies
+
+Explicitly declare and isolate dependencies.
+
+```mermaid
+graph TD
+    subgraph Manifest["Dependency Declaration"]
+        M1["package.json (Node)"]
+        M2["requirements.txt (Python)"]
+        M3["Gemfile (Ruby)"]
+    end
+
+    subgraph Isolation["Dependency Isolation"]
+        I1["node_modules/"]
+        I2["virtualenv"]
+        I3["Bundler"]
+    end
+```
+
+---
+
+## Factor 3: Config
+
+Store config in environment variables. Code and config are strictly
+separated — every deploy can have different config without code changes.
+
+| Config Type | Example | Belongs In |
+|------------|---------|-----------|
+| Resource handles | DATABASE_URL | Environment |
+| Third-party credentials | API_KEY | Environment |
+| Deployment-specific | HOSTNAME | Environment |
+| Application logic | DEBUG_MODE | Environment |
+
+---
+
+## Factor 4: Backing Services
+
+Treat databases, message queues, caches as attached resources —
+swappable via URL change without code modification.
+
+---
+
+## Factor 5: Build, Release, Run
+
+```mermaid
+flowchart LR
+    subgraph Build["Build Stage"]
+        BC["Compile code"] --> BA["Create artifact"]
+    end
+
+    subgraph Release["Release Stage"]
+        BA --> RC["Combine build + config"]
+        RC --> RT["Create release"]
+    end
+
+    subgraph Run["Run Stage"]
+        RT --> RS["Execute process"]
+    end
+```
+
+---
+
+## Factor 6: Processes
+
+Execute the app as stateless processes. Never store state in the
+process — use a stateful backing service.
+
+---
+
+## Factor 7: Port Binding
+
+The app is self-contained and exports HTTP as a service via port binding.
+No server injection required.
+
+---
+
+## Factor 8: Concurrency
+
+Scale out via the process model. Different process types handle
+different workloads.
+
+| Process Type | Purpose |
+|-------------|---------|
+| web | Handle HTTP requests |
+| worker | Background job processing |
+| clock | Scheduled task execution |
+
+---
+
+## Factors 9-12: Operations
+
+| Factor | Principle | Key Practice |
+|--------|-----------|-------------|
+| 9. Disposability | Fast startup and graceful shutdown | Handle SIGTERM |
+| 10. Dev/Prod Parity | Keep environments similar | Use same backing services |
+| 11. Logs | Treat as event streams | stdout, not log files |
+| 12. Admin Processes | One-off tasks in production | Run migrations as processes |
+
+---
+
+## Reading Guide
+
+| Factor | Topic | Est. Time | Priority |
+|--------|-------|-----------|----------|
+| 1-2 | Codebase and Dependencies | 15 min | Essential |
+| 3-4 | Config and Backing Services | 20 min | Essential |
+| 5 | Build, Release, Run | 15 min | Essential |
+| 6-8 | Processes, Port Binding, Concurrency | 20 min | Essential |
+| 9-10 | Disposability and Dev/Prod Parity | 15 min | Important |
+| 11-12 | Logs and Admin Processes | 15 min | Important |

@@ -1,0 +1,22 @@
+{
+  "id": "guinness-world-records-2024-guinness",
+  "slug": "guinness-world-records-2024-guinness",
+  "title": "Guinness World Records 2024",
+  "subtitle": null,
+  "authors": ["Guinness World Records"],
+  "year": 2023,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Fact Books and Almanacs",
+  "pages": 256,
+  "isbn": "9781913484202",
+  "language": "en",
+  "genres": ["Reference", "Trivia", "Nonfiction"],
+  "subjects": ["World Records", "Achievements", "Reference", "Sports"],
+  "themes": ["Human Achievement", "Extreme Performance", "Superlatives"],
+  "tags": ["records", "facts", "achievements", "trivia", "world-records", "reference", "superlatives", "human-achievement", "sports", "natural-world"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 4,
+  "estimatedListeningMinutes": 240,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

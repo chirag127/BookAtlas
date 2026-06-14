@@ -1,0 +1,17 @@
+{
+  "slug": "name-of-the-rose-umberto-eco",
+  "title": "The Name of the Rose",
+  "author": "Umberto Eco",
+  "publicationYear": 1980,
+  "isbn": "9780544176560",
+  "publisher": "Mariner",
+  "language": "en",
+  "genres": ["Fiction", "Historical Fiction", "Mystery", "Postmodern Literature"],
+  "subjects": ["Medieval History", "Semiotics", "Theology", "Philosophy", "Detective Fiction"],
+  "themes": ["Laughter and Subversion", "Knowledge and Power", "Interpretation and Meaning", "Faith vs Reason", "Truth and Authority"],
+  "tags": ["historical fiction", "mystery", "medieval", "semiotics", "monastery", "murder", "philosophy", "postmodern", "library", "detective"],
+  "difficulty": "medium",
+  "estimatedReadingHours": 14,
+  "estimatedListeningMinutes": 960,
+  "excerpt": "A medieval monk investigates a series of murders in a wealthy Italian abbey, uncovering a labyrinth of theological intrigue, forbidden knowledge, and the power of laughter."
+}

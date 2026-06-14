@@ -1,0 +1,22 @@
+{
+  "id": "spqr-mary-beard",
+  "slug": "spqr-mary-beard",
+  "title": "SPQR: A History of Ancient Rome",
+  "subtitle": null,
+  "authors": ["Mary Beard"],
+  "year": 2015,
+  "category": "Society, History & Power",
+  "subcategory": "Ancient History",
+  "pages": 608,
+  "isbn": "9781631492228",
+  "language": "en",
+  "genres": ["History", "Classics", "Nonfiction"],
+  "subjects": ["Ancient Rome", "Roman Empire", "Roman Republic", "Classical History"],
+  "themes": ["Empire and Citizenship", "Power and Institutions", "Historical Methodology"],
+  "tags": ["ancient-rome", "roman-history", "mary-beard", "classical-history", "roman-empire", "roman-republic", "classics", "citizenship", "popular-history"],
+  "difficulty": "easy-medium",
+  "estimatedReadingHours": 13,
+  "estimatedListeningMinutes": 780,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}

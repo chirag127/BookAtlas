@@ -1,0 +1,22 @@
+{
+  "id": "world-almanac-2025-world-almanac",
+  "slug": "world-almanac-2025-world-almanac",
+  "title": "The World Almanac and Book of Facts 2025",
+  "subtitle": null,
+  "authors": ["World Almanac"],
+  "year": 2024,
+  "category": "Reference & General Knowledge",
+  "subcategory": "Fact Books and Almanacs",
+  "pages": 1008,
+  "isbn": "9781510780387",
+  "language": "en",
+  "genres": ["Almanac", "Reference", "Nonfiction"],
+  "subjects": ["Almanacs", "Facts", "Statistics", "Reference"],
+  "themes": ["Annual Reference", "Current Events", "World Data"],
+  "tags": ["almanac", "facts", "statistics", "reference", "world-data", "current-events", "annual", "comprehensive", "USA", "reference-book"],
+  "difficulty": "easy",
+  "estimatedReadingHours": 20,
+  "estimatedListeningMinutes": 1200,
+  "source": "generated",
+  "generatedAt": "2026-06-14"
+}
