@@ -1,84 +1,82 @@
+# STYLE_GUIDE.md
+
 # BookAtlas Style Guide
 
-## Writing Style
+## MDX Formatting
 
-- **Voice**: Clear, authoritative, accessible
-- **Tone**: Educational, not academic
-- **Sentence length**: 15-20 words average
-- **Paragraphs**: 3-5 sentences
+- Use GitHub-flavored markdown
+- Use emojis for section headers (e.g., `# 📚 Overview`)
+- Use tables for structured data
+- Use Mermaid diagrams for frameworks and flows
+- Use admonitions for callouts
+- Use blockquotes for key quotes
+- Keep lines under 80 characters where possible
 
-## File Structure
+## File Naming
+
+- Book folders: `book-slug-author-name` (lowercase kebab-case)
+- Category folders: `leaf-category-name` (lowercase kebab-case)
+- Top categories: `NN-category-name` (numbered prefix)
+- Book files: `index.mdx`, `01-content.mdx`, `02-analysis.mdx`, `03-narration.mdx`, `meta.json`
+
+## Metadata
+
+- `slug`: lowercase-kebab-case, unique per book
+- `title`: Full book title
+- `authors`: Array of author names
+- `year`: Publication year (number)
+- `isbn13` or `isbn`: ISBN identifier
+- `difficulty`: `easy`, `medium`, `hard`, or `dense`
+- `tags`: Array of lowercase tags
+- `category`: Top-level category name
+- `subcategory`: Leaf category name
+
+## Content Guidelines
 
 ### index.mdx
-- Frontmatter with metadata
-- Executive summary (2-3 sentences)
-- Key takeaways (4 items)
-- Who should read
-- Who should skip
-- Difficulty rating
-- Reading/listening time estimates
-- Related books links
+- Orientation, not deep explanation
+- Executive summary in 2-3 sentences
+- Key takeaways as bullet points
+- Who should read/skip
+- Difficulty and time estimates
+- Related books
 - Final verdict
 
 ### 01-content.mdx
-- Core concepts and frameworks
-- Chapter-by-chapter breakdown
+- Deep understanding, largest file
+- Core concepts, frameworks, mental models
+- Chapter-by-chapter insights
 - Real-world examples
 - Practical applications
-- Actionable lessons
-- Reading guide with time estimates
+- Actionable lessons and action plan
+- No criticism
 
 ### 02-analysis.mdx
-- Strengths (specific, cited)
-- Weaknesses (balanced)
+- Critical thinking and evaluation
+- Strengths and weaknesses
 - Named criticisms from real reviewers
 - Counterarguments
 - Scientific evidence
 - Historical context
-- Comparison with similar works
-- Long-term relevance assessment
-- Final assessment (1-10 scale)
+- Similar books comparison
+- Long-term relevance
+- Final assessment
 
 ### 03-narration.mdx
-- Writing style description
-- Narrative structure analysis
-- Rhetorical techniques
-- Readability assessment
-- Comparative context
+- Audio-first learning
+- No headings in body
+- No bullet lists
+- No dialogue
+- Natural flowing paragraphs
+- Sounds like an audiobook
 
-### meta.json
-- slug (lowercase, hyphenated)
-- title, subtitle
-- authors (array)
-- year (integer)
-- category, subcategory
-- pages (integer)
-- isbn (string)
-- language (default: "en")
-- genres, subjects, themes (arrays)
-- tags (array)
-- difficulty (beginner/intermediate/advanced/mastery)
-- estimatedReadingHours, estimatedListeningMinutes
+## Anti-Duplication Rules
 
-## Naming Conventions
+Each file has one responsibility:
+- `index.mdx` → Orientation
+- `01-content.mdx` → Understanding
+- `02-analysis.mdx` → Evaluation
+- `03-narration.mdx` → Audio consumption
+- `meta.json` → Facts
 
-- Directory names: lowercase, hyphenated
-- Slugs: lowercase, hyphenated, author-last-name
-- Files: lowercase, with hyphens if needed
-
-## Markdown Features
-
-- Use emojis for visual hierarchy
-- Tables for comparisons
-- Admonitions for emphasis
-- Code blocks for technical content
-- Mermaid diagrams for systems
-
-## Quality Checklist
-
-- [ ] No duplicate content across files
-- [ ] Metadata matches book content
-- [ ] ISBN verified from official source
-- [ ] All criticisms are from named sources
-- [ ] Reading guide included in content file
-- [ ] Narration file has no headings in body
+Never rewrite the same thing five times.
