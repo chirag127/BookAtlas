@@ -1,0 +1,17 @@
+{
+  "slug": "make-it-stick-peter-brown",
+  "title": "Make It Stick: The Science of Successful Learning",
+  "author": "Peter C. Brown, Henry L. Roediger III, Mark A. McDaniel",
+  "publicationYear": 2014,
+  "isbn": "9780674729018",
+  "publisher": "Belknap Press",
+  "language": "en",
+  "genres": ["Education", "Psychology", "Science", "Self-Help"],
+  "subjects": ["Learning", "Memory", "Cognitive Psychology", "Study Skills", "Metacognition"],
+  "themes": ["Retrieval Practice", "Spaced Repetition", "Interleaving", "Desirable Difficulties", "Metacognition"],
+  "tags": ["learning", "memory", "cognitive science", "retrieval practice", "spaced repetition", "interleaving", "study skills", "education", "metacognition", "deliberate practice"],
+  "difficulty": "medium",
+  "estimatedReadingHours": 8,
+  "estimatedListeningMinutes": 480,
+  "excerpt": "A sweeping reassessment of how learning actually works, grounded in cognitive science and debunking popular myths—showing that the most effective learning strategies are often counterintuitive, requiring effort, struggle, and the willingness to forget."
+}

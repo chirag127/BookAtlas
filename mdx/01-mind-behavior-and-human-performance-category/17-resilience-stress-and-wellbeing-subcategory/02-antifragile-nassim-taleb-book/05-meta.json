@@ -1,0 +1,19 @@
+{
+  "slug": "antifragile-nassim-taleb",
+  "title": "Antifragile",
+  "subtitle": "Things That Gain from Disorder",
+  "author": "Nassim Nicholas Taleb",
+  "publicationYear": 2012,
+  "isbn": "9781400067824",
+  "publisher": "Random House",
+  "language": "en",
+  "pages": 544,
+  "genres": ["Philosophy", "Economics", "Science", "Business"],
+  "subjects": ["Antifragility", "Uncertainty", "Risk", "Volatility", "Complex Systems", "Decision Making", "Epistemology"],
+  "themes": ["Antifragility", "Barbell Strategy", "Via Negativa", "Hormesis", "Optionality", "Lindy Effect", "Fragilista", "Skin in the Game"],
+  "tags": ["nassim taleb", "antifragile", "fragile", "robust", "uncertainty", "risk", "volatility", "black swan", "barbell strategy", "via negativa", "hormesis", "optionality", "lindy effect", "complex systems"],
+  "difficulty": "medium",
+  "estimatedReadingHours": 10,
+  "estimatedListeningMinutes": 600,
+  "excerpt": "Some things benefit from shocks — they thrive and grow stronger when exposed to volatility, randomness, and stress. Nassim Taleb introduces a concept that had no name: antifragility. The opposite of fragile is not robust; it is antifragile. The book explores how antifragility operates in biology, finance, technology, and everyday life — and why the modern obsession with eliminating volatility has made us dangerously fragile."
+}

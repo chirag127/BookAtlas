@@ -1,0 +1,17 @@
+{
+  "slug": "noise-daniel-kahneman",
+  "title": "Noise: A Flaw in Human Judgment",
+  "author": "Daniel Kahneman, Olivier Sibony, Cass R. Sunstein",
+  "publicationYear": 2021,
+  "isbn": "9780316451406",
+  "publisher": "Little, Brown Spark",
+  "language": "en",
+  "genres": ["Psychology", "Decision Science", "Business", "Behavioral Economics"],
+  "subjects": ["Judgment", "Decision Making", "Cognitive Biases", "Noise", "Behavioral Economics"],
+  "themes": ["Noise vs Bias", "The Paradox of Judgment", "Decision Hygiene", "Mediating Assessments", "The Wisdom of Crowds", "The Cost of Inconsistency"],
+  "tags": ["noise", "judgment", "decision-making", "cognitive-biases", "kahneman", "sibony", "sunstein", "behavioral-economics", "variance", "inconsistency"],
+  "difficulty": "medium",
+  "estimatedReadingHours": 10,
+  "estimatedListeningMinutes": 600,
+  "excerpt": "Wherever humans make judgments—from courtrooms to boardrooms, medical clinics to hiring committees—unwanted variability called 'noise' produces errors just as damaging as bias, yet it remains largely invisible. Kahneman, Sibony, and Sunstein reveal how to recognize noise and reduce it through decision hygiene."
+}
